@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 
 function Navbar() {
 
@@ -7,8 +8,8 @@ function Navbar() {
             <div className="navTitleDiv">
                 <a className="navTitleA" href="/">
                     <h3 className="navTitle">
-                        <span classname="navTitleRe">Re</span>
-                        <span classname="navTitleCom">Commerce</span>
+                        <span className="navTitleRe">Re</span>
+                        <span className="navTitleCom">Commerce</span>
                     </h3>
                 </a>
             </div>
