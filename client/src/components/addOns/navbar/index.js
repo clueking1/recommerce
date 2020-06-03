@@ -6,12 +6,12 @@ function Navbar() {
     return (
         <nav className="navBar">
             <div className="navTitleDiv">
-                <a className="navTitleA" href="/">
-                    <h3 className="navTitle">
+                <h3 className="navTitle">
+                    <a className="navTitleA" href="/">
                         <span className="navTitleRe">Re</span>
                         <span className="navTitleCom">Commerce</span>
-                    </h3>
-                </a>
+                    </a>
+                </h3>
             </div>
             <div className="navAboutDiv">
                 <a className="navAboutA" href="/about">

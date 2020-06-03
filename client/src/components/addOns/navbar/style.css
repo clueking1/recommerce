@@ -2,15 +2,59 @@
     background-color: rgb(20, 51, 77);
     width: 100%;
     height: 60px;
+    position: relative;
+}
+
+.navTitleDiv {
+    width: 60%;
+    float: left;
+}
+
+.navAboutDiv {
+    width: 15%;
+    float: left;
+    padding-top: 20px; 
+}
+
+.navProductsDiv {
+    width: 15%;
+    float: left;
+    padding-top: 20px; 
 }
 
 .navTitleDiv h3 {
     margin:0px;
     padding: 10px;
+    width: 30%;
+}
+
+.navCart {
+    float: left;
+    width: 8%;
+    border: 1px white solid;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.navCart h3 {
+    margin:0px;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .navTitleA {
     text-decoration: none;
+    width: 200px;
+}
+
+.navAboutA {
+    text-decoration: none;
+    color: white;
+}
+
+.navProductsA {
+    text-decoration: none;
+    color: white;
 }
 
 .navTitleRe {
@@ -27,3 +71,4 @@
     color: rgb(255, 255, 255);
     margin-left: 8px;
 }
+
