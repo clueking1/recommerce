@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
 .homePageCon {
     position: absolute;
     top: 0;
-    margin-left: 30%;
+    margin-left: 26%;
     margin-top: 18%;
+    font-family: 'Lexend Tera', sans-serif;
 }
 
 .homeTitle {
@@ -16,7 +18,7 @@
     border: 1px white solid;
     background-color: white;
     border-radius: 50%;
-    font-size: 4em;
+    font-size: 3.8em;
 }
 
 .homeTitleCom {
