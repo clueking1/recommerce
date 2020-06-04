@@ -1,0 +1,6 @@
+.homePageWrapper {
+    height: 100%;
+    width: 100%;
+    background-image: url("./assets/embossed-diamond.png");
+    z-index: -1;
+}

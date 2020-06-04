@@ -1,9 +1,21 @@
-body {
+html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
+.homeWrapper {
+    height: 100%;
+    width: 100%;
+    background-image: repeating-linear-gradient(red, yellow 10%, green 20%)
+}
 
+.appWrapper {
+    height: 100%;
+    width: 100%;
+}
 #root{
     margin:0px;
+    height: 100%;
+    width: 100%;
 }
