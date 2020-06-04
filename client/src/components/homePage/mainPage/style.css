@@ -1,14 +1,13 @@
 .homePageWrapper {
     height: 95%;
     width: 100%;
-
     background-image: url("./assets/embossed-diamond.png");
-    z-index: 3;
 }
 
 .homePageColor {
     height: 100%;
     width: 100%;
     background: -webkit-linear-gradient(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
-    opacity: .7;
+    opacity: .9;
 }
+
