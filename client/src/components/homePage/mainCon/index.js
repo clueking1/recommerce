@@ -7,7 +7,14 @@ function HomePageCon() {
         <div className="homePageCon">
             <h2 className="homeTitle">
                 <span className="homeTitleRe">Re</span>
-                <span className="homeTitleCom">Commerce</span>
+                <span className="homeTitleCom">COMMERCE</span>
+            </h2>
+            <h2 className="homeRev">
+                <span className="homeRevRe">Re</span>
+                <span className="homeRevCom">MEMBER</span>
+                <span className="homeIn">TO</span>
+                <span className="homeSelRe">Re</span>
+                <span className="homeSelCom">SELL</span>
             </h2>
         </div>
     )

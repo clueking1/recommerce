@@ -24,3 +24,43 @@
     margin-left: 8px;
     font-size: 3.8em;
 }
+
+.homeRev {
+    margin-left: 30%;
+}
+
+.homeRevRe {
+    color: rgb(20, 51, 77);
+    text-align: center;
+    padding: 5px;
+    border: 1px white solid;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 1.7em;
+}
+
+.homeRevCom {
+    color: rgb(255, 255, 255);
+    margin-left: 8px;
+}
+
+.homeIn {
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    font-size: .8em;
+}
+
+.homeSelRe {
+    color: rgb(20, 51, 77);
+    text-align: center;
+    padding: 5px;
+    border: 1px white solid;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 1.7em;
+}
+
+.homeSelCom {
+    color: rgb(255, 255, 255);
+    margin-left: 8px;
+}
