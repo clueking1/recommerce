@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
 .homePageCon {
-    position: absolute;
-    top: 0;
-    margin-left: 26%;
-    margin-top: 18%;
+
     font-family: 'Lexend Tera', sans-serif;
+    width: 100px; height: 100px; /* must be present. No matter the value */
+    position: absolute;          /* to props top/bottom take effect */
+    margin: auto;                /* here's the magic. */
+    bottom: 25%; top: 0px;       /* This is how you center a block verticaly */
+    left: 20%;
 }
 
 .homeTitle {
@@ -18,17 +20,18 @@
     border: 1px white solid;
     background-color: white;
     border-radius: 50%;
-    font-size: 3.8em;
+    font-size: 6vw;
 }
 
 .homeTitleCom {
     color: rgb(255, 255, 255);
     margin-left: 8px;
-    font-size: 3.8em;
+    font-size: 5.5vw;
 }
 
 .homeRev {
-    margin-left: 30%;
+    margin-top: 30px;
+    margin-left: 100%;
 }
 
 .homeRevRe {
@@ -38,18 +41,19 @@
     border: 1px white solid;
     background-color: white;
     border-radius: 50%;
-    font-size: 1.7em;
+    font-size: 3.5vw;
 }
 
 .homeRevCom {
     color: rgb(255, 255, 255);
     margin-left: 8px;
+    font-size: 2vw;
 }
 
 .homeIn {
     color: rgb(255, 255, 255);
     margin: 0 10px;
-    font-size: .8em;
+    font-size: 1.5vw;
 }
 
 .homeSelRe {
@@ -59,10 +63,11 @@
     border: 1px white solid;
     background-color: white;
     border-radius: 50%;
-    font-size: 1.7em;
+    font-size: 3vw;
 }
 
 .homeSelCom {
     color: rgb(255, 255, 255);
     margin-left: 8px;
+    font-size: 2vw;
 }
