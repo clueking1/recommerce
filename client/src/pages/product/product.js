@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/addOns/navbar'
-import ProductLayout from '../components/productPage/productLayout'
+import Navbar from '../../components/addOns/navbar'
+import ProductLayout from '../../components/productPage/productLayout'
 import './style.css'
 
 function Products() {

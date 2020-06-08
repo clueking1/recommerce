@@ -1,7 +1,7 @@
 import React from 'react'
-import Home from './pages/home'
+import Home from './pages/home/home'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-import Products from './pages/product'
+import Products from './pages/product/product'
 
 function App() {
 
