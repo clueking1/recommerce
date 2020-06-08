@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/addOns/navbar'
 import ProductLayout from '../../components/productPage/productLayout'
+import ViewProducts from '../../components/productPage/products'
 import './style.css'
 
 function Products() {
@@ -9,6 +10,9 @@ function Products() {
         <div className="productWrapper">
             <Navbar />
             <ProductLayout />
+            <ViewProducts />
+            
+            
         </div>
     )
 }

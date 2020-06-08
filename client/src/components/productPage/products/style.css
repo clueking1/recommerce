@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+
+.productOne {
+    font-family: 'Lexend Tera', sans-serif;
+    width: 300px; height: 300px; /* must be present. No matter the value */
+    position: absolute;          /* to props top/bottom take effect */
+    margin: auto;                /* here's the magic. */
+    bottom: 40%; top: 0px;       /* This is how you center a block verticaly */
+    left: 20%;
+}
+
+.productImg {
+    width: 302px; height: 300px;
+}
+
+.productTitle {
+    width: 300px;
+    text-align: center;
+    border: 1px white solid;
+}
+
+.addToCartBut {
+    font-family: 'Lexend Tera', sans-serif;
+    width: 302px;
+    height: 30px;
+    text-align: center;
+    border: 1px white solid;
+}
