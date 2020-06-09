@@ -1,51 +1,16 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
+import { useAtcContext, AtcStore } from '../../utils/atcStore'
 import './style.css'
 
 
 function ViewProducts() {
-    const [backColor, setBackColor] = useState()
 
-    useEffect(() => {
-        let degree = -90
-        let color = 1 
-        let color1 = 1
-        let color2 = 1
-        setBackColor({backgroundImage : `-webkit-linear-gradient(90deg, rgb(15, 15, 15), rgb(22, 59, 90))`})
-        function step2() {
-            let int = setInterval(function (){ 
-                if (degree !== -90) {
-                    degree--
-                    color--
-                    color1--
-                    color2--
-                setBackColor({backgroundImage : `-webkit-linear-gradient(${degree}deg, rgb(15, 15, 15), rgb(${color1 / 8.22}, ${color2 / 3.06}, ${color / 2}))`})
-                } 
-                console.log('hi')
-                if (degree === -90) {
-                    clearInterval(int)
-                    step1()
-                 }
-             }, 10)
-        }
-        function step1() {
-        let int = setInterval(function (){ 
-            if (degree !== 90) {
-                degree++
-                color++
-                color1++
-                color2++
-            setBackColor({backgroundImage : `-webkit-linear-gradient(${degree}deg, rgb(15, 15, 15), rgb(${color1 / 8.22}, ${color2 / 3.06}, ${color / 2}))`})
-            } 
-            console.log('hi')
-            if (degree === 90) {
-                clearInterval(int)
-                step2()
-             }
-         }, 10)
-        }
-        step1()
-    }, [])
-
+    
+        console.log(AtcStore._currentValue.item)
+        console.log(AtcStore)
+    const [state, dispatch] = useAtcContext()
+        console.log(state)
+    let value = 0
     return (
         <div className="productsWrapper">
             <div className="productOne" >
@@ -55,7 +20,13 @@ function ViewProducts() {
                     <h3>Iphone X</h3>
                 </div>
                 <div className="addToCart">
-                    <button value="150" className="addToCartBut">Add To Cart $150</button>
+                    <button 
+                    value="150" 
+                    className="addToCartBut"
+                    onClick={() => dispatch(
+                        { type: "add", value: 150, item: "Iphone X", src: "IphoneWhite"}
+                    )}
+                    >Add To Cart $150</button>
                 </div>
             </div>
             <div className="productTwo">
@@ -65,7 +36,13 @@ function ViewProducts() {
                     <h3>Iphone 11</h3>
                 </div>
                 <div className="addToCart">
-                    <button value="250" className="addToCartBut">Add To Cart $250</button>
+                    <button 
+                    value="250" 
+                    className="addToCartBut"
+                    onClick={() => dispatch(
+                        { type: "add", value: 250, item: "Iphone 11", src: "Iphone11"}
+                    )}
+                    >Add To Cart $250</button>
                 </div>
             </div>
             <div className="productThree">
@@ -75,7 +52,13 @@ function ViewProducts() {
                     <h3>Iphone X</h3>
                 </div>
                 <div className="addToCart">
-                    <button value="150" className="addToCartBut">Add To Cart $150</button>
+                    <button 
+                    value="150" 
+                    className="addToCartBut"
+                    onClick={() => dispatch(
+                        { type: "add", value: 150, item: "Iphone X", src: "IphoneBlack"}
+                    )}
+                    >Add To Cart $150</button>
                 </div>
             </div>
         </div>

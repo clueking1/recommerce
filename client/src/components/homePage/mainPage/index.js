@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useAtcContext, AtcStore } from '../../utils/atcStore'
 import './style.css'
 
 function HomePage() {
+    console.log(AtcStore)
     const [backColor, setBackColor] = useState()
 
     useEffect(() => {
@@ -18,7 +20,6 @@ function HomePage() {
                 color2++
             setBackColor({backgroundImage : `-webkit-linear-gradient(${degree}deg, rgb(15, 15, 15), rgb(${color1 / 8.22}, ${color2 / 3.06}, ${color / 2}))`})
             } 
-            console.log('hi')
             if (degree === 90) {
                 clearInterval(int)
              }
