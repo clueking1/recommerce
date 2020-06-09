@@ -1,7 +1,9 @@
 .productWrapper {
-    height: 95%;
+    height: 100%;
     width: 100%;
+    overflow:auto; 
     background-image: url("./assets/embossed-diamond.png");
+    display: table;
 }
 
 .productColor {
@@ -10,4 +12,15 @@
     background-image:-webkit-linear-gradient(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
     background-image:(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
     opacity: .9;
+    
+}
+
+@media only screen and (max-width: 1056px) {
+    .productWrapper {
+        height: 100%;
+        width: 100%;
+        overflow:auto; 
+        background-image: url("./assets/embossed-diamond.png");
+        display: table;
+    }
 }

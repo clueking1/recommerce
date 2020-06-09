@@ -10,7 +10,7 @@ function Products() {
         <div className="productWrapper">
             <Navbar />
             <ProductLayout />
-            <ViewProducts />
+    
             
             
         </div>

@@ -3,6 +3,8 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow: auto;
+    display: table;
 }
 .homeWrapper {
     height: 100%;
@@ -13,6 +15,7 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
 #root{
     margin:0px;
     height: 100%;

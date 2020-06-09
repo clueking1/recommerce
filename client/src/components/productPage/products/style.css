@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
 
 .productsWrapper {
+    height: 100%;
     position: absolute;
     width: 1000px;
     margin: 0 auto;              
     left: 0;
     right: 0;
-    bottom: 0px; top: 0px; 
+    bottom: 0; top: 0px; 
 }
 .productOne {
     font-family: 'Lexend Tera', sans-serif;
@@ -15,7 +16,23 @@
     margin: auto;              
     bottom: 30%; top: 0px;    
     left: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.459);
+    height: max-content;
+    box-shadow: 10px 10px 20px 2px #88888877;
+    
 }
+
+.productBackImg {
+    width: 322px;
+    height: 415px;
+    z-index: -1;
+    position: absolute;
+    margin-top: -315px;
+    margin-left: -10px;
+}
+
 
 .productTwo {
     font-family: 'Lexend Tera', sans-serif;
@@ -24,6 +41,11 @@
     margin: auto;              
     bottom: 30%; top: 0px;    
     left: 350px;
+    margin-bottom: 0;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.459);
+    height: max-content;
+    box-shadow: 10px 10px 20px 2px #88888877;
 }
 
 
@@ -34,18 +56,26 @@
     margin: auto;              
     bottom: 30%; top: 0px;    
     left: 700px;
+    margin-bottom: 0;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.459);
+    height: max-content;
+    box-shadow: 10px 10px 20px 2px #88888877;
 }
 
 .productImg {
     width: 302px; height: 300px;
+    z-index: 1;
 }
 
 .productTitle {
     margin-top: -4px;
     width: 300px;
     text-align: center;
-    border: 1px white solid;
+    border: 1px rgba(255, 255, 255, 0.384) solid;
     color: white;
+    background-image:-webkit-linear-gradient(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
+    background-image:(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
 }
 
 
@@ -57,4 +87,58 @@
     text-align: center;
     border: 1px white solid;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1056px) {
+    .productsWrapper {
+        width: 300px;
+        margin: 0 auto;              
+        left: 0;
+        right: 0;
+        bottom: 0px; top: 0px;
+
+
+    }
+    .productImg {
+        width: 302px; height: 300px;
+    }
+    .productOne {
+        font-family: 'Lexend Tera', sans-serif;
+        width: 300px; height: 300px; 
+        margin: 100px auto;              
+        left: 0;
+        right: 0;
+        bottom: 0px; top: 0px;
+        margin-bottom: 0; 
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.459);
+        height: max-content;
+        
+    }
+
+    .productTwo {
+        font-family: 'Lexend Tera', sans-serif;
+        width: 300px; height: 300px; 
+        margin: 520px auto;              
+        left: 0;
+        right: 0;
+        bottom: 0px; top: 0px;
+        margin-bottom: 0; 
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.459);
+    height: max-content;
+    }
+
+    .productThree {
+        font-family: 'Lexend Tera', sans-serif;
+        width: 300px; height: 300px; 
+        margin: 1000px auto;              
+        left: 0;
+        right: 0;
+        bottom: 0px; top: 0px; 
+        margin-bottom: 80px;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.459);
+    height: max-content;
+    }
 }
