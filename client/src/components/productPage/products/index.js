@@ -1,16 +1,26 @@
 import React, {useEffect} from 'react'
-import { useAtcContext, AtcStore } from '../../utils/atcStore'
+import { useAtcContext } from '../../utils/atcStore'
 import './style.css'
 
 
 function ViewProducts() {
+        const [state, dispatch] = useAtcContext()
+        let atc = sessionStorage.getItem('atc')
 
-    
-        console.log(AtcStore._currentValue.item)
-        console.log(AtcStore)
-    const [state, dispatch] = useAtcContext()
-        console.log(state)
-    let value = 0
+        useEffect(() => {
+            if (JSON.parse(atc) !== null) {
+                JSON.parse(atc).map(t => dispatch({type: "add", value: t.value, item: t.item, src: t.src}))
+
+                console.log(JSON.parse(atc))
+            }
+        }, [])
+
+        useEffect(() => {
+            if (state.length > 1) {
+                sessionStorage.setItem('atc', JSON.stringify(state))
+            } 
+        }, [state])
+      
     return (
         <div className="productsWrapper">
             <div className="productOne" >

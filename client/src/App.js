@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Home from './pages/home/home'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Products from './pages/product/product'
-import { AtcProvider } from './components/utils/atcStore'
+import { AtcProvider, useAtcContext } from './components/utils/atcStore'
 
 function App() {
 

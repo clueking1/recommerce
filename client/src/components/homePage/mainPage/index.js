@@ -3,7 +3,7 @@ import { useAtcContext, AtcStore } from '../../utils/atcStore'
 import './style.css'
 
 function HomePage() {
-    console.log(AtcStore)
+
     const [backColor, setBackColor] = useState()
 
     useEffect(() => {

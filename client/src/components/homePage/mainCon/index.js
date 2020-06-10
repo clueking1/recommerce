@@ -17,7 +17,6 @@ function HomePageCon() {
             //setOp({opacity : `${start / 181}`, transform: `scale(${start / 181})`, webkitTransform:  `scale(${start / 181})`})
             setOp({opacity : `${start / 181}`})
             } 
-            console.log(op)
             if (op > 1) {
                 clearInterval(int)
              }
