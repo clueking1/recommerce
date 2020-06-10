@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useAtcContext, AtcStore } from '../../utils/atcStore'
+import { runGlobal } from '../../utils/globalStore'
 import './style.css'
 
 function HomePage() {
-
+    const [state, dispatch] = useAtcContext()
     const [backColor, setBackColor] = useState()
 
+
+    useEffect(() => {
+        runGlobal(dispatch)
+    }, [])
+
+    console.log(state)
     useEffect(() => {
         let degree = -90
         let color = 1 

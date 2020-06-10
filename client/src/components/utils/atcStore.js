@@ -30,10 +30,13 @@ function AtcProvider({value = [], ...props}) {
 
     const [state, dispatch] = useReducer(reducer, [])
     return <Provider value={[state, dispatch]} {...props} />
+    
 }
 
 function useAtcContext() {
     return useContext(AtcStore)
 }
+
+
 
 export { AtcProvider, useAtcContext, AtcStore}

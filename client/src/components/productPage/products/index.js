@@ -1,26 +1,22 @@
 import React, {useEffect} from 'react'
-import { useAtcContext } from '../../utils/atcStore'
+import { useAtcContext, AtcProvider } from '../../utils/atcStore'
+import { runGlobal, updateGlobal } from '../../utils/globalStore'
 import './style.css'
 
 
 function ViewProducts() {
-        const [state, dispatch] = useAtcContext()
+    console.log(AtcProvider.runGlobal)
+    const [state, dispatch] = useAtcContext()
         let atc = sessionStorage.getItem('atc')
 
         useEffect(() => {
-            if (JSON.parse(atc) !== null) {
-                JSON.parse(atc).map(t => dispatch({type: "add", value: t.value, item: t.item, src: t.src}))
-
-                console.log(JSON.parse(atc))
-            }
+            runGlobal(dispatch)
         }, [])
 
         useEffect(() => {
-            if (state.length > 1) {
-                sessionStorage.setItem('atc', JSON.stringify(state))
-            } 
+            updateGlobal(state)
         }, [state])
-      
+            console.log(state)
     return (
         <div className="productsWrapper">
             <div className="productOne" >
