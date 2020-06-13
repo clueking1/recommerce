@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useAtcContext, AtcStore } from '../../utils/atcStore'
+import { useAtcContext } from '../../utils/atcStore'
 import { runGlobal } from '../../utils/globalStore'
 import './style.css'
 
@@ -10,7 +10,7 @@ function HomePage() {
 
     useEffect(() => {
         runGlobal(dispatch)
-    }, [])
+    }, [dispatch])
 
     console.log(state)
     useEffect(() => {

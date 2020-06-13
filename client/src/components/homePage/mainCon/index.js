@@ -21,9 +21,11 @@ function HomePageCon() {
                 clearInterval(int)
              }
          }, 7)
-       setInterval(function (){ 
+       
+        setInterval(function (){ 
             clearInterval(int)
         }, 1800)
+       
          
     }, [])
 

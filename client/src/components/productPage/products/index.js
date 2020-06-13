@@ -7,16 +7,16 @@ import './style.css'
 function ViewProducts() {
     console.log(AtcProvider.runGlobal)
     const [state, dispatch] = useAtcContext()
-        let atc = sessionStorage.getItem('atc')
 
         useEffect(() => {
             runGlobal(dispatch)
-        }, [])
+        }, [dispatch])
 
         useEffect(() => {
+
             updateGlobal(state)
         }, [state])
-            console.log(state)
+          console.log(state)
     return (
         <div className="productsWrapper">
             <div className="productOne" >
