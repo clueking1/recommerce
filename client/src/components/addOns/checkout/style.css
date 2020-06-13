@@ -1,0 +1,13 @@
+.coWrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid white;
+    background-color: rgba(20, 51, 77, 0.514);
+}
+
+.coWrapper h2 {
+    color: white;
+}
