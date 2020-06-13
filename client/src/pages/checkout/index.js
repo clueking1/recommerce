@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Navbar from '../../components/addOns/navbar'
+import CheckOutLayout from '../../components/checkOutPage/checkOutLayout'
+import { useAtcContext } from '../../components/utils/atcStore'
+import { runGlobal } from '../../components/utils/globalStore'
+import './style.css'
 
 function CheckOutPage() {
+    const [state, dispatch] = useAtcContext()
+
+    useEffect(() => {
+        runGlobal(dispatch)
+    }, [dispatch])
+
     return (
         <div className="coWrapperPage">
-            hey
+            <Navbar />
+            <CheckOutLayout />
         </div>
     )
 }
