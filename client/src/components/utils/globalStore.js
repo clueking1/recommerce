@@ -16,4 +16,5 @@ function updateGlobal(sta) {
 
 }
 
- export { runGlobal, updateGlobal }
+
+ export { runGlobal, updateGlobal}

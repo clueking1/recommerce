@@ -10,11 +10,9 @@ const { Provider } = AtcStore
 
 const reducer = (state, action) => {
 
-    Object.keys(state)
     switch(action.type) {
-     
         case "add":
-            //if (obArr.length <= 0) {
+  
                 return [
                     ...state,
                     {
@@ -24,7 +22,12 @@ const reducer = (state, action) => {
                         quantity: 1
                     }
                 ]
-
+        case "plus":
+            state.map(t =>  {
+                if (t.src === action.src) {
+                    t.quantity++
+                }
+            })
         default:
             return state
     }
@@ -44,3 +47,8 @@ function useAtcContext() {
 
 
 export { AtcProvider, useAtcContext, AtcStore}
+
+
+
+    
+

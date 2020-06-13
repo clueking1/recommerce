@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react'
 import { useAtcContext, AtcProvider } from '../../utils/atcStore'
-import { runGlobal, updateGlobal } from '../../utils/globalStore'
+import { runGlobal, updateGlobal} from '../../utils/globalStore'
 import './style.css'
 
 
 function ViewProducts() {
     console.log(AtcProvider.runGlobal)
+
     const [state, dispatch] = useAtcContext()
 
         useEffect(() => {
@@ -13,10 +14,28 @@ function ViewProducts() {
         }, [dispatch])
 
         useEffect(() => {
-
             updateGlobal(state)
         }, [state])
-          console.log(state)
+
+       function dispatc(it) {
+            if (state.length === 0) {
+                dispatch({type: "add", value: it.value, item: it.item, src: it.src})
+            } else {
+                dispat(it)
+            }
+        }
+        
+       function dispat(it) {
+           let check = state.filter(t => t.src === it.src)
+      
+           if(check.length !== 0){
+            dispatch({type: "plus", value: it.value, item: it.item, src: it.src})
+   
+            } else {
+            dispatch({type: "add", value: it.value, item: it.item, src: it.src})
+            }
+        }
+    console.log(state)
     return (
         <div className="productsWrapper">
             <div className="productOne" >
@@ -29,7 +48,7 @@ function ViewProducts() {
                     <button 
                     value="150" 
                     className="addToCartBut"
-                    onClick={() => dispatch(
+                    onClick={() => dispatc(
                         { type: "add", value: 150, item: "Iphone X", src: "IphoneWhite"}
                     )}
                     >Add To Cart $150</button>
@@ -45,8 +64,8 @@ function ViewProducts() {
                     <button 
                     value="250" 
                     className="addToCartBut"
-                    onClick={() => dispatch(
-                        { type: "add", value: 250, item: "Iphone 11", src: "Iphone11"}
+                    onClick={() => dispatc(
+                        { type: "add", value: 250, item: "Iphone 11", src: "Iphone11", quan: 1}
                     )}
                     >Add To Cart $250</button>
                 </div>
@@ -61,7 +80,7 @@ function ViewProducts() {
                     <button 
                     value="150" 
                     className="addToCartBut"
-                    onClick={() => dispatch(
+                    onClick={() => dispatc(
                         { type: "add", value: 150, item: "Iphone X", src: "IphoneBlack"}
                     )}
                     >Add To Cart $150</button>
