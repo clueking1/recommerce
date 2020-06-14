@@ -10,11 +10,11 @@ function ViewProducts() {
     const [flip, setFlip] = useState(true)
         useEffect(() => {
             runGlobal(dispatch)
-        }, [])
+        }, [dispatch])
 
         useEffect(() => {
             updateGlobal(state)
-        }, [flip])
+        }, [state])
 
 
        function stateLen(it) {

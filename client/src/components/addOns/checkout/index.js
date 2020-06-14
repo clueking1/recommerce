@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { useAtcContext } from '../../utils/atcStore'
+import React from 'react'
 import './style.css'
 
 function Checkout() {

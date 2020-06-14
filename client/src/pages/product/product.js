@@ -7,7 +7,7 @@ import './style.css'
 
 function Products() {
     
-    const [state, dispatch] = useAtcContext()
+    const [state] = useAtcContext()
 
     return (
         <div className="productWrapper">

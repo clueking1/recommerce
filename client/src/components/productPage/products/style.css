@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
 
 .productsWrapper {
-    height: 100%;
-    position: absolute;
-    width: 1000px;
+    height: max-content;
+    width: 1100px;
     margin: 0 auto;              
     left: 0;
     right: 0;
-    bottom: 0; top: 0px; 
+   margin-bottom: 0;
 }
 .productOne {
     font-family: 'Lexend Tera', sans-serif;
-    width: 300px; height: 300px; 
-    position: absolute;    
-    margin: auto;              
-    bottom: 30%; top: 0px;    
-    left: 0;
-    margin-bottom: 0;
+    width: 300px; 
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.459);
-    height: max-content;
+    height: 422;
     box-shadow: 10px 10px 20px 2px #88888877;
-    
+    float: left;
+    z-index: 6;
+    margin-right: 20px;
+    margin-top: 100px;
 }
 
 .productBackImg {
@@ -36,36 +33,34 @@
 
 .productTwo {
     font-family: 'Lexend Tera', sans-serif;
-    width: 300px; height: 300px; 
-    position: absolute;    
-    margin: auto;              
-    bottom: 30%; top: 0px;    
-    left: 350px;
-    margin-bottom: 0;
+    width: 300px; 
+   
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.459);
-    height: max-content;
+    height: 422;
     box-shadow: 10px 10px 20px 2px #88888877;
+    float: left;
+    margin-right: 20px;
+    margin-top: 100px;
+    z-index: 6;
 }
 
 
 .productThree {
     font-family: 'Lexend Tera', sans-serif;
-    width: 300px; height: 300px; 
-    position: absolute;    
-    margin: auto;              
-    bottom: 30%; top: 0px;    
-    left: 700px;
-    margin-bottom: 0;
+    width: 300px; 
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.459);
-    height: max-content;
+    height: 422;
     box-shadow: 10px 10px 20px 2px #88888877;
+    float: left;
+    margin-top: 100px;
+    z-index: 6;
 }
 
 .productImg {
     width: 302px; height: 300px;
-    z-index: 1;
+    z-index: 6;
 }
 
 .productTitle {
@@ -76,6 +71,7 @@
     color: white;
     background-image:-webkit-linear-gradient(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
     background-image:(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
+    
 }
 
 
@@ -89,56 +85,3 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1056px) {
-    .productsWrapper {
-        width: 300px;
-        margin: 0 auto;              
-        left: 0;
-        right: 0;
-        bottom: 0px; top: 0px;
-
-
-    }
-    .productImg {
-        width: 302px; height: 300px;
-    }
-    .productOne {
-        font-family: 'Lexend Tera', sans-serif;
-        width: 300px; height: 300px; 
-        margin: 100px auto;              
-        left: 0;
-        right: 0;
-        bottom: 0px; top: 0px;
-        margin-bottom: 0; 
-        padding: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.459);
-        height: max-content;
-        
-    }
-
-    .productTwo {
-        font-family: 'Lexend Tera', sans-serif;
-        width: 300px; height: 300px; 
-        margin: 520px auto;              
-        left: 0;
-        right: 0;
-        bottom: 0px; top: 0px;
-        margin-bottom: 0; 
-        padding: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.459);
-    height: max-content;
-    }
-
-    .productThree {
-        font-family: 'Lexend Tera', sans-serif;
-        width: 300px; height: 300px; 
-        margin: 1000px auto;              
-        left: 0;
-        right: 0;
-        bottom: 0px; top: 0px; 
-        margin-bottom: 80px;
-        padding: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.459);
-    height: max-content;
-    }
-}

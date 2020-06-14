@@ -12,7 +12,7 @@ function Home() {
 
     useEffect(() => {
         runGlobal(dispatch)
-    }, [])
+    }, [dispatch])
 
     
 

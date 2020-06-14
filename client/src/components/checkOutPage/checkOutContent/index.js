@@ -3,7 +3,7 @@ import { useAtcContext } from '../../utils/atcStore'
 import './style.css'
 
 function CoContent() {
-    const [state, dispatch] = useAtcContext()
+    const [state] = useAtcContext()
     return( 
         <div className="coContent">
             {state.map(t => (
