@@ -9,25 +9,37 @@ const AtcStore = createContext({
 const { Provider } = AtcStore
 
 const reducer = (state, action) => {
-
+    console.log(action)
     switch(action.type) {
         case "add":
-  
-                return [
-                    ...state,
-                    {
-                        item: action.item,
-                        value: action.value,
-                        src: action.src,
-                        quantity: 1
-                    }
-                ]
-        case "plus":
-            state.map(t =>  {
-                if (t.src === action.src) {
-                    t.quantity++
+            console.log('add')
+            return [
+                ...state,
+                {
+                    item: action.item,
+                    value: action.value,
+                    src: action.src,
+                    quantity: 1
                 }
-            })
+            ]
+           
+        case "plus":
+            state[action.oSrc].quantity += 1
+            return [
+                ...state,
+            ]
+        case "saved":
+            console.log('saved')
+            return [
+                ...state,
+                {
+                    item: action.item,
+                    value: action.value,
+                    src: action.src,
+                    quantity: action.quantity
+                }
+            ]
+        
         default:
             return state
     }

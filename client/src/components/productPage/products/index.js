@@ -1,40 +1,48 @@
-import React, {useEffect} from 'react'
-import { useAtcContext, AtcProvider } from '../../utils/atcStore'
+import React, {useEffect, useState} from 'react'
+import { useAtcContext } from '../../utils/atcStore'
 import { runGlobal, updateGlobal} from '../../utils/globalStore'
 import './style.css'
 
 
 function ViewProducts() {
-    console.log(AtcProvider.runGlobal)
 
     const [state, dispatch] = useAtcContext()
-
+    const [flip, setFlip] = useState(true)
         useEffect(() => {
             runGlobal(dispatch)
-        }, [dispatch])
+        }, [])
 
         useEffect(() => {
             updateGlobal(state)
-        }, [state])
+        }, [flip])
 
-       function dispatc(it) {
+
+       function stateLen(it) {
             if (state.length === 0) {
+                console.log('nooooooo')
                 dispatch({type: "add", value: it.value, item: it.item, src: it.src})
+                setFlip(!flip)
             } else {
-                dispat(it)
+                plusAdd(it) 
             }
         }
         
-       function dispat(it) {
-           let check = state.filter(t => t.src === it.src)
-      
-           if(check.length !== 0){
-            dispatch({type: "plus", value: it.value, item: it.item, src: it.src})
-   
-            } else {
+      function plusAdd(it) {
+
+        let index = state.map(e =>  e.src).indexOf(it.src)
+        
+        if (index !== -1) {
+            dispatch({type: "plus", src: it.src, oSrc: index})
+        } else {
             dispatch({type: "add", value: it.value, item: it.item, src: it.src})
-            }
         }
+        setFlip(!flip)
+      }
+
+       
+
+           
+        
     console.log(state)
     return (
         <div className="productsWrapper">
@@ -48,7 +56,7 @@ function ViewProducts() {
                     <button 
                     value="150" 
                     className="addToCartBut"
-                    onClick={() => dispatc(
+                    onClick={() => stateLen(
                         { type: "add", value: 150, item: "Iphone X", src: "IphoneWhite"}
                     )}
                     >Add To Cart $150</button>
@@ -64,7 +72,7 @@ function ViewProducts() {
                     <button 
                     value="250" 
                     className="addToCartBut"
-                    onClick={() => dispatc(
+                    onClick={() => stateLen(
                         { type: "add", value: 250, item: "Iphone 11", src: "Iphone11", quan: 1}
                     )}
                     >Add To Cart $250</button>
@@ -80,7 +88,7 @@ function ViewProducts() {
                     <button 
                     value="150" 
                     className="addToCartBut"
-                    onClick={() => dispatc(
+                    onClick={() => stateLen(
                         { type: "add", value: 150, item: "Iphone X", src: "IphoneBlack"}
                     )}
                     >Add To Cart $150</button>

@@ -12,18 +12,14 @@ function CheckOutPage() {
 
     useEffect(() => {
         runGlobal(dispatch)
-    }, [dispatch])
-
-    console.log(state)
+    }, [])
 
     return (
         <div className="coWrapperPage">
             <Navbar />
             <CheckOutLayout />
-            
-            {setTimeout(function(){
-               return <CoContent data={data} />
-            }, 100)}
+            <CoContent data={data} />
+
         </div>
     )
 }
