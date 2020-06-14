@@ -8,7 +8,6 @@ import './style.css'
 
 function CheckOutPage() {
     const [state, dispatch] = useAtcContext()
-    const [data, setData] = useState([]) 
 
     useEffect(() => {
         runGlobal(dispatch)
@@ -17,9 +16,9 @@ function CheckOutPage() {
     return (
         <div className="coWrapperPage">
             <Navbar />
-            <CheckOutLayout />
-            <CoContent data={data} />
+            <CheckOutLayout/>
 
+          
         </div>
     )
 }

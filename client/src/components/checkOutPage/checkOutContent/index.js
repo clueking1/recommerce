@@ -1,7 +1,8 @@
 import React from 'react'
 import { useAtcContext } from '../../utils/atcStore'
+import './style.css'
 
-function CoContent(props) {
+function CoContent() {
     const [state, dispatch] = useAtcContext()
     return( 
         <div className="coContent">

@@ -9,8 +9,6 @@
 .checkoutColor {
     height: 100%;
     width: 100%;
-    background-image:-webkit-linear-gradient(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
-    background-image:(90deg, rgb(15, 15, 15), rgb(22, 59, 90));
-    opacity: .9;
-    
+    background-image:-webkit-linear-gradient(90deg, rgba(15, 15, 15, 0.87), rgba(22, 59, 90, 0.856));
+    background-image:(90deg, rgb(15, 15, 15), rgba(22, 59, 90, 0.308));
 }
