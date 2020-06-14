@@ -85,3 +85,32 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 1200px) {
+    .productsWrapper {
+        height: max-content;
+        width: 400px;
+        margin: 0 auto;              
+        left: 0;
+        right: 0;
+        margin-top: 0px;
+    }
+    .productOne {
+        float: none;
+        margin-top: 0;
+        margin: 0 auto;              
+        left: 0;
+        right: 0;
+    }
+    .productTwo {
+        float: none;
+        margin: 0 auto;              
+        left: 0;
+        right: 0;
+    }
+    .productThree {
+        float: none;
+        margin: 0 auto;              
+        left: 0;
+        right: 0;
+    }
+  }
