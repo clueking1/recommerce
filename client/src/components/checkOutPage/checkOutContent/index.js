@@ -9,6 +9,8 @@ import iphone11 from '../../productPage/products/assets/iphone11.jpg'
 function CoContent() {
     const [state, dispatch] = useAtcContext()
     let [tot, setTot] = useState(0)
+    const [setStyle, setSetStyle] = useState()
+
     function image(img) {
         if (img === "IphoneWhite") {
             return iphoneWhite
@@ -46,6 +48,14 @@ function CoContent() {
         
       }
 
+    function subBut(quan) {
+        if (quan === 0) {
+            return {cursor: "cursor", visibility: "hidden"}
+        } else {
+            return {cursor: "pointer"}
+        }
+    }
+
     return( 
         <div className="coContent">
             <div className="revOrder">
@@ -70,9 +80,10 @@ function CoContent() {
                         </div>
                         <div className="prodPlusSub">
                             <div className="z">
-                                <p className="productQuan">{t.quantity > 0 ? t.quantity : 0}</p>
+                                <p className="productQuan">{t.quantity}</p>
                                 <div className="productPlus">
                                     <button 
+                                        style={subBut(t.quantity)}
                                         className="plusBut"
                                         onClick={() => plusSub({type: "sub", src: t.src, quantity: t.quantity})}
                                     >-</button>
