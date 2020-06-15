@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+.coContent {
+    margin-top: 10px;
+}
+
 .productInfoWrapper {
-    display: table;
+    height: 210px;
+    width: 800px;
+    margin: 0 auto;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.377);
+    font-family: 'Lexend Tera', sans-serif;
+    color: white;
+    margin-bottom: 20px;
 }
 
 .productInfo {
@@ -19,7 +30,7 @@
 .z {
     height: 200px;
     position: relative;
-    margin-top: 70px;
+    top: 70px;
     text-align: center;   
 }
 
@@ -43,7 +54,7 @@
     text-align: center;
 }
 .plusBut {
-    margin-left: 35px;
+    margin-left: 34px;
     padding: 10px;
     width: 30px;
     float: left;
