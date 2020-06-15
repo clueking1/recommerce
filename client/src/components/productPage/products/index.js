@@ -46,9 +46,11 @@ function ViewProducts() {
     console.log(state)
     return (
         <div className="productsWrapper">
+
             <div className="productOne" >
                 <img className="productImg" alt="iphoneX" src={require('./assets/imageIphoneX.jpeg')} />
-                <img className="productBackImg" alt="backgif" src={require('./assets/gif2.gif')} />
+                
+                
                 <div className="productTitle" >
                     <h3>Iphone X</h3>
                 </div>
@@ -64,7 +66,7 @@ function ViewProducts() {
             </div>
             <div className="productTwo">
                 <img className="productImg" alt="iphoneX" src={require('./assets/iphone11.jpg')} />
-                <img className="productBackImg" alt="backgif" src={require('./assets/gif2.gif')} />
+
                 <div className="productTitle" >
                     <h3>Iphone 11</h3>
                 </div>
@@ -80,7 +82,7 @@ function ViewProducts() {
             </div>
             <div className="productThree">
                 <img className="productImg" alt="iphoneX" src={require('./assets/iphoneBlack.jpeg')} />
-                <img className="productBackImg" alt="backgif" src={require('./assets/gif2.gif')} />
+
                 <div className="productTitle" >
                     <h3>Iphone X</h3>
                 </div>
