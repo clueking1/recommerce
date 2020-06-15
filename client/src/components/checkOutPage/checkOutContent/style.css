@@ -1,3 +1,30 @@
-.coContent {
- position: absolute;
+.productInfoWrapper {
+    display: table;
+}
+
+.productInfo {
+    display: table;
+    width: 700px;
+    float: left;
+}
+
+.prodNameDiv {
+    width: 200px;
+    display: table-cell;
+}
+
+.prodValDiv {
+    width: 200px;
+    display: table-cell;
+}
+
+.prodPlusSub {
+    width: 100px;
+    display: table-cell;
+}
+
+.coImg {
+    width: 200px;
+    height: 200px;
+    float: left;
 }
