@@ -4,17 +4,28 @@
 
 .productInfo {
     display: table;
-    width: 700px;
+    width: 500px;
+    height: 200px;
+    margin-left: 20px;
     float: left;
 }
 
 .prodNameDiv {
-    width: 200px;
+    width: 100px;
+    
     display: table-cell;
 }
 
+.z {
+    height: 200px;
+    position: relative;
+    margin-top: 70px;
+    text-align: center;   
+}
+
+
 .prodValDiv {
-    width: 200px;
+    width: 100px;
     display: table-cell;
 }
 
@@ -26,5 +37,14 @@
 .coImg {
     width: 200px;
     height: 200px;
+    float: left;
+}
+.productQuan {
+    text-align: center;
+}
+.plusBut {
+    margin-left: 35px;
+    padding: 10px;
+    width: 30px;
     float: left;
 }

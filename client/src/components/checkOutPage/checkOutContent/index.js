@@ -26,8 +26,10 @@ function CoContent() {
                     <div className="productInfo">
                     
                         <div className="prodNameDiv">
+                        <div className="z">
                             <p className="productNameTit">Item</p> 
                             <p className="productName">{t.item}</p> 
+                        </div>
                         </div>
                         <div className="prodValDiv">
                             <p className="productValueTit">Price</p> 
@@ -36,10 +38,10 @@ function CoContent() {
                         <div className="prodPlusSub">
                             <p className="productQuan">{t.quantity}</p>
                             <div className="productPlus">
-
+                                <button className="plusBut">+</button>
                             </div>
                             <div className="productSub">
-                                
+                            <button className="plusBut">-</button>
                             </div>
                         </div>
                         
