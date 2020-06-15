@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './pages/home/home'
 import CheckOutPage from './pages/checkout'
+import PaymentPage from './pages/payment'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Products from './pages/product/product'
 import { AtcProvider } from './components/utils/atcStore'
@@ -20,6 +21,9 @@ function App() {
                     </Switch>
                     <Switch>
                         <CheckOutPage path="/checkout"/>
+                    </Switch>
+                    <Switch>
+                        <PaymentPage path="/payment"/>
                     </Switch>
              
                 </div>

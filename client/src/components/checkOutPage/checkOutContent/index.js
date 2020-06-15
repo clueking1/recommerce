@@ -103,7 +103,7 @@ function CoContent() {
             <div className="totalOrder">
                 <p className="total">Total:<span className="totalNum">${tot}</span></p>
                 <div className="proceedBut">
-                <a className="proceed proceedBut" href="/">Proceed To Payment</a>
+                <a className="proceed proceedBut" href="/payment">Proceed To Payment</a>
                 </div>
               
             </div>
