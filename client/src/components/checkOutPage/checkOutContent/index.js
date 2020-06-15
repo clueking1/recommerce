@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import { useAtcContext } from '../../utils/atcStore'
+import { updateGlobal} from '../../utils/globalStore'
 import './style.css'
 import iphoneWhite from '../../productPage/products/assets/imageIphoneX.jpeg'
 import iphoneBlack from '../../productPage/products/assets/iphoneBlack.jpeg'
 import iphone11 from '../../productPage/products/assets/iphone11.jpg'
 
 function CoContent() {
-    const [state] = useAtcContext()
-
+    const [state, dispatch] = useAtcContext()
+    let [tot, setTot] = useState(0)
     function image(img) {
         if (img === "IphoneWhite") {
             return iphoneWhite
@@ -17,6 +18,31 @@ function CoContent() {
             return iphone11
         }
     }
+
+    useEffect(() => {
+        updateGlobal(state)
+    }, [state])
+
+    useEffect(() => {
+        let first = 0
+        state.map(t => {
+            let total = t.value * t.quantity
+            first += total
+        })
+        setTot(first)
+    }, [state])
+
+    function plusSub(it) {
+
+        let index = state.map(e =>  e.src).indexOf(it.src)
+        
+        if (it.type === "plus") {
+            dispatch({type: "plus", src: it.src, oSrc: index})
+        } else {
+            dispatch({type: "sub", src: it.src, oSrc: index})
+        }
+        
+      }
 
     return( 
         <div className="coContent">
@@ -44,10 +70,16 @@ function CoContent() {
                             <div className="z">
                                 <p className="productQuan">{t.quantity}</p>
                                 <div className="productPlus">
-                                    <button className="plusBut">+</button>
+                                    <button 
+                                        className="plusBut"
+                                        onClick={() => plusSub({type: "sub", src: t.src})}
+                                    >-</button>
                                 </div>
                                 <div className="productSub">
-                                <button className="plusBut">-</button>
+                                <button 
+                                    className="plusBut"
+                                    onClick={() => plusSub({type: "plus", src: t.src})}
+                                >+</button>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +88,7 @@ function CoContent() {
                 </div>
             ))}
             <div className="totalOrder">
-                <p className="total">Total:<span className="totalNum">$150</span></p>
+                <p className="total">Total:<span className="totalNum">${tot}</span></p>
                 <div className="proceedBut">
                 <a className="proceed proceedBut" href="/">Proceed To Payment</a>
                 </div>

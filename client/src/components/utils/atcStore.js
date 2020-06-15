@@ -28,6 +28,11 @@ const reducer = (state, action) => {
             return [
                 ...state,
             ]
+        case "sub":
+            state[action.oSrc].quantity -= 1
+            return [
+                ...state,
+            ]
         case "saved":
             console.log('saved')
             return [
