@@ -3,6 +3,15 @@
     margin-top: 10px;
 }
 
+.revOrder {
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Lexend Tera', sans-serif;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    margin-bottom: 10px;
+}
+
 .productInfoWrapper {
     height: 210px;
     width: 800px;
@@ -58,4 +67,34 @@
     padding: 10px;
     width: 30px;
     float: left;
+}
+
+.totalOrder {
+    
+    width: 800px;
+    padding: 10px 0;
+    margin: 0 auto;
+    font-family: 'Lexend Tera', sans-serif;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+}
+
+.total {
+    
+    color: white;
+    float: left;
+    width: 50px;
+    margin-left: 400px;
+    position:absolute;
+}
+
+.proceed {
+    font-family: 'Lexend Tera', sans-serif;
+    
+}
+
+.proceedBut {
+    padding: 10px;
+    margin-left: 530px;
+    width: 200px;
 }

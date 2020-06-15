@@ -20,6 +20,9 @@ function CoContent() {
 
     return( 
         <div className="coContent">
+            <div className="revOrder">
+                <h2>Review Your Order</h2>
+            </div>
             {state.map(t => (
                 <div className="productInfoWrapper" key={t.src}>
                     <img className="coImg" src={image(t.src)} />
@@ -52,6 +55,12 @@ function CoContent() {
                     </div>
                 </div>
             ))}
+            <div className="totalOrder">
+                <p className="total">Total:<span className="totalNum">$150</span></p>
+                <button className="proceedBut">
+                    <a className="proceed">Proceed To Payment</a>
+                </button>
+            </div>
         </div>
     )
 }
