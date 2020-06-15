@@ -33,7 +33,9 @@ function CoContent() {
     }, [state])
 
     function plusSub(it) {
-
+        if (it.quantity - 1 < 0) {
+            return
+        }
         let index = state.map(e =>  e.src).indexOf(it.src)
         
         if (it.type === "plus") {
@@ -68,11 +70,11 @@ function CoContent() {
                         </div>
                         <div className="prodPlusSub">
                             <div className="z">
-                                <p className="productQuan">{t.quantity}</p>
+                                <p className="productQuan">{t.quantity > 0 ? t.quantity : 0}</p>
                                 <div className="productPlus">
                                     <button 
                                         className="plusBut"
-                                        onClick={() => plusSub({type: "sub", src: t.src})}
+                                        onClick={() => plusSub({type: "sub", src: t.src, quantity: t.quantity})}
                                     >-</button>
                                 </div>
                                 <div className="productSub">
