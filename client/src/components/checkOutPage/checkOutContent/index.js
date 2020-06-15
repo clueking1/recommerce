@@ -57,9 +57,10 @@ function CoContent() {
             ))}
             <div className="totalOrder">
                 <p className="total">Total:<span className="totalNum">$150</span></p>
-                <button className="proceedBut">
-                    <a className="proceed">Proceed To Payment</a>
-                </button>
+                <div className="proceedBut">
+                <a className="proceed proceedBut" href="/">Proceed To Payment</a>
+                </div>
+              
             </div>
         </div>
     )
