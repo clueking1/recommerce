@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
 .coContent {
     margin-top: 10px;
+
 }
 
 
 .revOrder {
+   
+   
     width: 800px;
     margin: 0 auto;
     font-family: 'Lexend Tera', sans-serif;
@@ -71,11 +74,12 @@
     padding: 10px;
     width: 30px;
     float: left;
+    cursor: pointer;
 }
 
 .totalOrder {
     display: table;
-    width: 600px;
+    width: 800px;
     padding: 10px 0;
     margin: 0 auto;
     font-family: 'Lexend Tera', sans-serif;
@@ -84,12 +88,19 @@
 }
 
 .total {
-    
+    margin-left: 450px;
     color: white;
     width: 50px;
-    display: table-cell;
-    padding-left: 420px;
-    padding-right: 40px;
+    display: inline-block;
+}
+
+.pro {
+    width: 800px;
+    margin: 0 auto;
+    position: absolute;
+    display: inline-block;
+    margin-left: 95px;
+    margin-top: 10px;
 }
 
 .proceed {
@@ -102,6 +113,7 @@
     display: table-cell;
     border: 1px solid white;
     background-color: rgba(128, 128, 128, 0.521);
+    
 }
 
 .proceedBut {
@@ -110,3 +122,74 @@
      width: 200px;
     text-align: center;
 }
+
+@media only screen and (max-width: 900px) {
+    .revOrder {
+        width: 400px;
+        text-align: center;
+    }
+
+    .totalOrder {
+        width: 400px;
+    }
+    .total {
+        margin-left: 50px;
+    }
+    
+    .proceedBut {
+        width: 200px;
+    }
+    .productInfoWrapper {
+       width: 400px;
+    }
+    .productInfo {
+        width: 200px;
+        position: absolute;
+    }
+    .productNameTit {
+        float: left;
+        border-right: 1px solid white;
+        padding-right: 10px;
+    }
+    .productName {
+        float: left;
+        padding-left: 10px;
+    }
+    .productValueTit {
+        float: left;
+        border-right: 1px solid white;
+        padding-right: 8px;
+    }
+    .productValue {
+        float: left;
+        padding-left: 10px;
+    }
+    .prodNameDiv {
+        margin-left: 190px;
+        margin-top: -90px;
+        position: absolute;
+    }
+    .prodValDiv {
+        margin-left: 190px;
+        margin-top: -20px;
+        position: absolute;
+    }
+    .prodPlusSub {
+        position: absolute;
+        margin-top: 60px;
+        margin-left: 150px;
+    }
+    .productQuan {
+        position: absolute;
+        margin-left: 105px;
+        margin-top: -1px;
+        font-size: 1.7em;
+        width: 10px;
+        height: 10px;
+        text-align: center;
+    }
+    .plusBut {
+        margin-left: 60px;
+    }
+    
+  }

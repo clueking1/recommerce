@@ -90,10 +90,10 @@ function CoContent() {
                                     >-</button>
                                 </div>
                                 <div className="productSub">
-                                <button 
-                                    className="plusBut"
-                                    onClick={() => plusSub({type: "plus", src: t.src})}
-                                >+</button>
+                                    <button 
+                                        className="plusBut"
+                                        onClick={() => plusSub({type: "plus", src: t.src})}
+                                    >+</button>
                                 </div>
                             </div>
                         </div>
@@ -103,10 +103,10 @@ function CoContent() {
             ))}
             <div className="totalOrder">
                 <p className="total">Total:<span className="totalNum">${tot}</span></p>
-                <div className="proceedBut">
-                <PaymentPage tot={tot}/>
+                <div className="pro">
+                    <PaymentPage tot={tot}/>
                 </div>
-              
+                
             </div>
         </div>
     )

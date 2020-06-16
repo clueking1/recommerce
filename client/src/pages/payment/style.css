@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+.StripeCheckout {
+    background: black;
+    font-family: 'Lexend Tera', sans-serif;
+}
+
+.StripeCheckout span {
+    background-image: -webkit-linear-gradient(grey, black, grey);
+    font-family: 'Lexend Tera', sans-serif;
+}
