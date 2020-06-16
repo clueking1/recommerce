@@ -1,195 +1,334 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
 .coContent {
-    margin-top: 10px;
+    color: white;
+    font-family: 'Lexend Tera', sans-serif;
 
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
-
 .revOrder {
-   
-   
-    width: 800px;
+    width: 80vw;
     margin: 0 auto;
-    font-family: 'Lexend Tera', sans-serif;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.349);
-    margin-bottom: 10px;
 }
 
 .productInfoWrapper {
-    height: 210px;
-    width: 800px;
-    margin: 0 auto;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.377);
-    font-family: 'Lexend Tera', sans-serif;
-    color: white;
-    margin-bottom: 20px;
+        padding-top: 10px;
+        width: 80vw;
+        height: 180px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid white;
+}
+
+.totalOrder {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 80vw;
+        height: 40px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        
+        margin-bottom: 30px;
+}
+
+.total {
+    width: 19vw;
+    float: left;
+    margin-left: 50%;
+}
+
+.pro {
+    margin-top: 15px;
+}
+
+.coImg {
+        width: 150px;
+        height: 150px;
+        float: left;
 }
 
 .productInfo {
-    display: table;
-    width: 500px;
-    height: 200px;
-    margin-left: 20px;
+    width: 100%;
+}
+
+.productNameTit {
+    margin-left: 5px;
+
+   
+}
+
+.productName {
+
+    padding-left: 6px;
+}
+
+.productValueTit {
+    margin-left: 5px;
+    
+    padding-right: 6px;
+  
+}
+
+.productValue {
+   
+    padding-left: 6px;
+}
+
+
+
+.prodPlusSub button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.productQuan {
+    float: left;
+    padding-left: 0px;
+    margin-top: 5px;
+}
+
+.productSub {
+    margin-left: 80px;
+}
+
+.productPlus {
     float: left;
 }
 
 .prodNameDiv {
-    width: 100px;
-    
-    display: table-cell;
+    margin-top: 50px;
+    width: 20vw;
+    float: left;
+    text-align: center;
 }
-
-.z {
-    height: 200px;
-    width: 193px;
-    position: relative;
-    top: 70px;
-    text-align: center;   
-}
-
 
 .prodValDiv {
-    width: 100px;
-    display: table-cell;
-
+    margin-top: 50px;
+    width: 30vw;
+    float: left;
+    text-align: center;
 }
 
 .prodPlusSub {
-    width: 100px;
-    display: table-cell;
-
-}
-
-.coImg {
-    width: 200px;
-    height: 200px;
+    width: 10vw;
     float: left;
-}
-.productQuan {
-    text-align: center;
-}
-.plusBut {
-    margin-left: 45px;
-    padding: 10px;
-    width: 30px;
-    float: left;
-    cursor: pointer;
+    margin-top: 80px;
 }
 
-.totalOrder {
-    display: table;
-    width: 800px;
-    padding: 10px 0;
+.productPlus {
+    width: 50px;
+
+}
+
+
+.zz {
+    width: 15vw;
     margin: 0 auto;
-    font-family: 'Lexend Tera', sans-serif;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.349);
 }
+
+
+
+
+@media only screen and (max-width: 750px) {
+    .prodNameDiv {
+        margin-top: 0;
+        width: 40vw;
+        float: left;
+        text-align: center;
+    }
+
+    .productNameTit {
+        margin-left: 5px;
+        border-right: 1px solid white;
+        padding-right: 10px;
+        float: left;
+    }
+
+    .productName {
+        float: left;
+        padding-left: 6px;
+    }
+
+    .productValueTit {
+        margin-left: 5px;
+        border-right: 1px solid white;
+        padding-right: 6px;
+        float: left;
+    }
+
+    .productValue {
+        float: left;
+        padding-left: 6px;
+    }
+    
+    .prodValDiv {
+        margin-top: 50px;
+        width: 30vw;
+        text-align: center;
+        float: none;
+    }
+    .productInfo {
+        float: left;
+        width: 50vw;
+    }
+    .prodPlusSub {
+        width: 10vw;
+        float: left;
+        margin-top: 60px;
+        margin-left: 70px;
+    }
+    .totalOrder {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 80vw;
+        height: 40px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
 
 .total {
-    margin-left: 450px;
-    color: white;
-    width: 50px;
-    display: inline-block;
+    width: 19vw;
+    float: left;
+    margin-left: 35%;
 }
 
 .pro {
-    width: 800px;
-    margin: 0 auto;
-    position: absolute;
-    display: inline-block;
-    margin-left: 95px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
-
-.proceed {
-    font-family: 'Lexend Tera', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    color: rgb(219, 217, 217);
-    height: 100%;
-    width: 100%;
-    display: table-cell;
-    border: 1px solid white;
-    background-color: rgba(128, 128, 128, 0.521);
     
 }
 
-.proceedBut {
-    cursor: pointer;
-    padding: 10px;
-     width: 200px;
-    text-align: center;
-}
-
-@media only screen and (max-width: 900px) {
-    .revOrder {
-        width: 400px;
-        text-align: center;
-    }
-
-    .totalOrder {
-        width: 400px;
-    }
-    .total {
-        margin-left: 50px;
-    }
-    
-    .proceedBut {
-        width: 200px;
+@media only screen and (max-width: 600px) {
+    .productInfo {
+        float: left;
     }
     .productInfoWrapper {
-       width: 400px;
+        width: 90vw;
+        height: 180px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
     }
-    .productInfo {
-        width: 200px;
-        position: absolute;
+    .revOrder {
+        width: 90vw;
+        margin: 0 auto;
     }
+
     .productNameTit {
-        float: left;
+        margin-left: 5px;
         border-right: 1px solid white;
         padding-right: 10px;
+        float: left;
     }
+
     .productName {
         float: left;
-        padding-left: 10px;
+        padding-left: 6px;
     }
+
     .productValueTit {
-        float: left;
+        margin-left: 5px;
         border-right: 1px solid white;
-        padding-right: 8px;
+        padding-right: 6px;
+        float: left;
     }
+
     .productValue {
         float: left;
-        padding-left: 10px;
+        padding-left: 6px;
     }
-    .prodNameDiv {
-        margin-left: 190px;
-        margin-top: -90px;
-        position: absolute;
-    }
-    .prodValDiv {
-        margin-left: 190px;
-        margin-top: -20px;
-        position: absolute;
-    }
+
     .prodPlusSub {
-        position: absolute;
-        margin-top: 60px;
-        margin-left: 150px;
+        clear: both;
+        margin-left: 10px;
+        margin-top: 0px;
+        width: 30vw;
     }
-    .productQuan {
-        position: absolute;
-        margin-left: 105px;
-        margin-top: -1px;
-        font-size: 1.7em;
-        width: 10px;
-        height: 10px;
+
+    .prodPlusSub button {
+        width: 30px;
+        height: 30px;
         text-align: center;
     }
-    .plusBut {
-        margin-left: 60px;
+
+    .productQuan {
+        float: left;
+        padding-left: 0px;
+        margin-top: 5px;
+    }
+
+    .productSub {
+        
+        margin-left: 80px;
+    }
+
+    .productPlus {
+        float: left;
+    }
+    .zz {
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .totalOrder {
+        margin-top: 10px;
+        padding: 10px 0;
+        width: 90vw;
+        height: 40px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        
+        margin-bottom: 30px;
+}
+
+.total {
+    width: 30vw;
+    float: left;
+    margin-left: 30%;
+}
+
+.pro {
+    margin-top: 15px;
+}
+}
+
+@media only screen and (max-width: 499px) {
+    .coContent {
+        font-size: .6em;
+    }
+    .prodNameDiv {
+        margin-top: 0;
+        width: 40vw;
+       
+    }
+
+    .productInfo {
+        float: left;
+        width:10vw;
+    }
+    .prodPlusSub {
+        clear: both;
+        margin-left: 10px;
+        margin-top: 20px;
+        width: 30vw;
+    }
+    .totalOrder {
+        height: 20px;
+    }
+    .total {
+        width: 30vw;
+        float: left;
+        margin-left: 20%;
+        margin-top: 0px;
     }
     
-  }
+    .pro {
+        margin-top: 0px;
+    }
+}

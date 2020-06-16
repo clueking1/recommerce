@@ -68,20 +68,20 @@ function CoContent() {
                     <div className="productInfo">
                     
                         <div className="prodNameDiv">
-                            <div className="z">
+                            
                                 <p className="productNameTit">Item</p> 
                                 <p className="productName">{t.item}</p> 
-                            </div>
+                            
                         </div>
                         <div className="prodValDiv">
-                            <div className="z">
+                            
                                 <p className="productValueTit">Price</p> 
                                 <p className="productValue">${t.value}</p> 
-                            </div>
+                            
                         </div>
                         <div className="prodPlusSub">
-                            <div className="z">
-                                <p className="productQuan">{t.quantity}</p>
+                            
+                        <div className="zz">
                                 <div className="productPlus">
                                     <button 
                                         style={subBut(t.quantity)}
@@ -89,13 +89,14 @@ function CoContent() {
                                         onClick={() => plusSub({type: "sub", src: t.src, quantity: t.quantity})}
                                     >-</button>
                                 </div>
+                                <p className="productQuan">{t.quantity}</p>
                                 <div className="productSub">
                                     <button 
                                         className="plusBut"
                                         onClick={() => plusSub({type: "plus", src: t.src})}
                                     >+</button>
                                 </div>
-                            </div>
+                            </div>  
                         </div>
                         
                     </div>
