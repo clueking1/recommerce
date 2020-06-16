@@ -5,6 +5,7 @@ import './style.css'
 import iphoneWhite from '../../productPage/products/assets/imageIphoneX.jpeg'
 import iphoneBlack from '../../productPage/products/assets/iphoneBlack.jpeg'
 import iphone11 from '../../productPage/products/assets/iphone11.jpg'
+import PaymentPage from '../../../pages/payment'
 
 function CoContent() {
     const [state, dispatch] = useAtcContext()
@@ -103,7 +104,7 @@ function CoContent() {
             <div className="totalOrder">
                 <p className="total">Total:<span className="totalNum">${tot}</span></p>
                 <div className="proceedBut">
-                <a className="proceed proceedBut" href="/payment">Proceed To Payment</a>
+                <PaymentPage tot={tot}/>
                 </div>
               
             </div>
