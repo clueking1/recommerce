@@ -16,7 +16,9 @@ function PaymentPage(props) {
        .then(res => {
            console.log(res.data.status)
             if (res.data.status === "success") {
-               return history.push("/")
+               dispatch({type: "splice"})
+               sessionStorage.clear();
+               history.push("/")
             } else {
                 console.log("fail")
             }

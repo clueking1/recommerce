@@ -34,7 +34,6 @@ const reducer = (state, action) => {
                 ...state,
             ]
         case "saved":
-            console.log('saved')
             return [
                 ...state,
                 {
@@ -44,7 +43,8 @@ const reducer = (state, action) => {
                     quantity: action.quantity
                 }
             ]
-        
+        case "splice":
+            return state.splice()
         default:
             return state
     }
