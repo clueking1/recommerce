@@ -1,35 +1,12 @@
 import React from 'react'
 import API from '../../components/utils/API'
 import { useAtcContext } from '../../components/utils/atcStore'
+import  { useHistory } from 'react-router-dom'
 import Stripecheckout from 'react-stripe-checkout'
 import './style.css'
 
-const CARD_OPTIONS = {
-    iconStyle: 'solid',
-    style: {
-      base: {
-        iconColor: '#c4f0ff',
-        color: '#fff',
-        fontWeight: 500,
-        fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
-        fontSize: '50px',
-        fontSmoothing: 'antialiased',
-        ':-webkit-autofill': {
-          color: '#fce883',
-        },
-        '::placeholder': {
-          color: '#87bbfd',
-        },
-      },
-      invalid: {
-        iconColor: '#ffc7ee',
-        color: '#ffc7ee',
-      },
-    },
-  };
-
-
 function PaymentPage(props) {
+    const history = useHistory()
     const [state, dispatch] = useAtcContext()
     async function handleToken(token) {
        API.stripe({
@@ -37,7 +14,12 @@ function PaymentPage(props) {
            amount: props.tot
        })
        .then(res => {
-          console.log(res)
+           console.log(res.data.status)
+            if (res.data.status === "success") {
+               return history.push("/")
+            } else {
+                console.log("fail")
+            }
        })
     }
 
