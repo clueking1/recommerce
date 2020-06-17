@@ -13,11 +13,7 @@ function Navbar() {
                     </a>
                 </h3>
             </div>
-            <div className="navAboutDiv">
-                <a className="navAboutA" href="/about">
-                    About
-                </a>
-            </div>
+      
             <div className="navProductsDiv">
                 <a className="navProductsA" href="/products">
                     Products
