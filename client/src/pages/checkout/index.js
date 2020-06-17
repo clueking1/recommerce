@@ -3,8 +3,6 @@ import Navbar from '../../components/addOns/navbar'
 import CheckOutLayout from '../../components/checkOutPage/checkOutLayout'
 import { useAtcContext } from '../../components/utils/atcStore'
 import { runGlobal } from '../../components/utils/globalStore'
-import PaymentPage from '../payment'
-
 import './style.css'
 
 function CheckOutPage() {

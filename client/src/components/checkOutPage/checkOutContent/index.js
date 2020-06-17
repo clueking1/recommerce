@@ -10,7 +10,6 @@ import PaymentPage from '../../../pages/payment'
 function CoContent() {
     const [state, dispatch] = useAtcContext()
     let [tot, setTot] = useState(0)
-    const [setStyle, setSetStyle] = useState()
 
     function image(img) {
         if (img === "IphoneWhite") {
@@ -30,7 +29,7 @@ function CoContent() {
         let first = 0
         state.map(t => {
             let total = t.value * t.quantity
-            first += total
+            return first += total
         })
         setTot(first)
     }, [state])
@@ -64,7 +63,7 @@ function CoContent() {
             </div>
             {state.map(t => (
                 <div className="productInfoWrapper" key={t.src}>
-                    <img className="coImg" src={image(t.src)} />
+                    <img className="coImg" alt="prodImage" src={image(t.src)} />
                     <div className="productInfo">
                     
                         <div className="prodNameDiv">

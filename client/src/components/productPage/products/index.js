@@ -19,7 +19,6 @@ function ViewProducts() {
 
        function stateLen(it) {
             if (state.length === 0) {
-                console.log('nooooooo')
                 dispatch({type: "add", value: it.value, item: it.item, src: it.src})
                 setFlip(!flip)
             } else {
@@ -39,11 +38,6 @@ function ViewProducts() {
         setFlip(!flip)
       }
 
-       
-
-           
-        
-    console.log(state)
     return (
         <div className="productsWrapper">
 

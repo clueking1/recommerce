@@ -7,7 +7,7 @@ import './style.css'
 
 function PaymentPage(props) {
     const history = useHistory()
-    const [state, dispatch] = useAtcContext()
+    const [, dispatch] = useAtcContext()
     async function handleToken(token) {
        API.stripe({
            token: token,

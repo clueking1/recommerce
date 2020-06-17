@@ -9,10 +9,9 @@ const AtcStore = createContext({
 const { Provider } = AtcStore
 
 const reducer = (state, action) => {
-    console.log(action)
+
     switch(action.type) {
         case "add":
-            console.log('add')
             return [
                 ...state,
                 {
