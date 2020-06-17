@@ -107,7 +107,7 @@ function CoContent() {
                 {/* <div className="pro">
                     {/* <PaymentPage tot={tot}/>
                 </div> */}
-                <PaypalBut />
+                <PaypalBut tot={tot}/>
                 
             </div>
         </div>

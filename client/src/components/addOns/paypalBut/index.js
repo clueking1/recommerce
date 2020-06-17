@@ -6,12 +6,13 @@ import  { useHistory } from 'react-router-dom'
 import './style.css'
 import { PayPalButton } from "react-paypal-button-v2";
  
-function PaypalBut() {
-  
+function PaypalBut(props) {
+    const history = useHistory()
+    const [, dispatch] = useAtcContext()
     return (
     <div className="paypal">
       <PayPalButton
-        amount="0.01"
+        amount={props.tot}
         shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
           alert("Transaction completed by " + details.payer.name.given_name);
