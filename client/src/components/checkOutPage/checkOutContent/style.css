@@ -11,7 +11,14 @@
 .revOrder {
     width: 80vw;
     margin: 0 auto;
+    padding-top: 20px;
 }
+
+.revOrder h2 {
+    margin-top: 0px;
+
+}
+
 
 .productInfoWrapper {
         padding-top: 10px;
@@ -36,9 +43,9 @@
 }
 
 .total {
-    width: 19vw;
-    float: left;
-    margin-left: 50%;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .pro {
@@ -192,15 +199,13 @@
         right: 0;
     }
 
-.total {
+/* .total {
     width: 19vw;
-    float: left;
-    margin-left: 35%;
-}
+    
+    margin-left: 30%;
+} */
 
-.pro {
-    margin-top: 15px;
-}
+
     
 }
 
@@ -287,11 +292,11 @@
         margin-bottom: 30px;
 }
 
-.total {
+/* .total {
     width: 30vw;
     float: left;
     margin-left: 30%;
-}
+} */
 
 .pro {
     margin-top: 15px;
@@ -321,12 +326,12 @@
     .totalOrder {
         height: 20px;
     }
-    .total {
+    /* .total {
         width: 30vw;
         float: left;
         margin-left: 20%;
         margin-top: 0px;
-    }
+    } */
     
     .pro {
         margin-top: 0px;

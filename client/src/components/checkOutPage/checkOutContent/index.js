@@ -6,6 +6,7 @@ import iphoneWhite from '../../productPage/products/assets/imageIphoneX.jpeg'
 import iphoneBlack from '../../productPage/products/assets/iphoneBlack.jpeg'
 import iphone11 from '../../productPage/products/assets/iphone11.jpg'
 import PaymentPage from '../../../pages/payment'
+import PaypalBut from '../../addOns/paypalBut'
 
 function CoContent() {
     const [state, dispatch] = useAtcContext()
@@ -103,9 +104,10 @@ function CoContent() {
             ))}
             <div className="totalOrder">
                 <p className="total">Total:<span className="totalNum">${tot}</span></p>
-                <div className="pro">
-                    <PaymentPage tot={tot}/>
-                </div>
+                {/* <div className="pro">
+                    {/* <PaymentPage tot={tot}/>
+                </div> */}
+                <PaypalBut />
                 
             </div>
         </div>
