@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import Navbar from '../../components/addOns/navbar'
 import Checkout from '../../components/addOns/checkout'
-//import LoginLayout from '../../components/loginPage/loginLayout'
+import SignUpLayout from '../../components/signUpPage/signLayout'
 import { useAtcContext } from '../../components/utils/atcStore'
 import { runGlobal } from '../../components/utils/globalStore'
 import './style.css'
@@ -18,7 +18,7 @@ function SignUp() {
     return (
         <div className="homeWrapper">
             <Navbar />
-            {/* <LoginLayout/> */}
+            <SignUpLayout/>
             {state.length >= 1 ? <Checkout /> : undefined} 
         </div>
     )

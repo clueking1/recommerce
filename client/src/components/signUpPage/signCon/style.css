@@ -19,8 +19,7 @@
     width: 300px;
     margin: 0 auto;
 }
-
-.userNameLog {
+.emailSig {
     width: 300px;
     padding: 10px 0;
     text-align: center;
@@ -28,18 +27,33 @@
     border-top-right-radius: 30%;
     font-family: 'Lexend Tera', sans-serif;
 }
-
-.passwordLog {
+.userNameSig {
     margin-top: 5px;
+    width: 300px;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Lexend Tera', sans-serif;
+}
+
+.passwordSig {
+    margin-top: 5px;
+    width: 300px;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Lexend Tera', sans-serif;
+}
+
+.passwordSigCon {
+    margin-top: 5px;
+    font-family: 'Lexend Tera', sans-serif;
     width: 300px;
     padding: 10px 0;
     text-align: center;
     border-bottom-left-radius: 30%;
     border-bottom-right-radius: 30%;
-    font-family: 'Lexend Tera', sans-serif;
 }
 
-.loginBut {
+.sigBut {
     font-family: 'Lexend Tera', sans-serif;
     margin-top: 30px;
     width: 304px;
@@ -51,6 +65,8 @@
     color: white;
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
 }
 
 .resellerBut {
