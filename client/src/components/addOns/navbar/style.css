@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+
 .navBar {
     background-color: rgb(20, 51, 77);
     width: 100%;
     height: 60px;
     position: relative;
+    font-family: 'Lexend Tera', sans-serif;
 }
 
 .navTitleDiv {
@@ -31,9 +34,22 @@
 .navCart {
     float: left;
     width: 8%;
-    border: 1px white solid;
     height: 50px;
     margin-top: 5px;
+}
+
+.fa {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+.fa-user {
+    width: 30px;
+    height: 30px;
 }
 
 .navCart h3 {

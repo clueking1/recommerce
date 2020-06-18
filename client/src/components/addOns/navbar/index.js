@@ -1,8 +1,9 @@
 import React from 'react'
+import  { useHistory } from 'react-router-dom'
 import './style.css'
 
 function Navbar() {
-
+    const history = useHistory()
     return (
         <nav className="navBar">
             <div className="navTitleDiv">
@@ -20,7 +21,11 @@ function Navbar() {
                 </a>
             </div>
             <div className="navCart">
-                <h3>H</h3>
+                <i 
+                    class="fa fa-user" 
+                    aria-hidden="true"
+                    onClick={() => history.push('/login')}
+                ></i>
             </div>
         </nav>
     )
