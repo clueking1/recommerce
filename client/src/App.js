@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './pages/home/home'
+import Login from './pages/login'
 import CheckOutPage from './pages/checkout'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Products from './pages/product/product'
@@ -20,6 +21,9 @@ function App() {
                     </Switch>
                     <Switch>
                         <CheckOutPage path="/checkout"/>
+                    </Switch>
+                    <Switch>
+                        <Login path="/login"/>
                     </Switch>
                 </div>
             </Router>

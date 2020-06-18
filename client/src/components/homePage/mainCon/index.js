@@ -48,7 +48,11 @@ function HomePageCon() {
                     className="buyer" 
                     onClick={() => history.push("/products")}
                 >Buyer</button>
-                <button className="seller">Seller</button>
+                
+                <button 
+                    className="seller"
+                    onClick={() => history.push("/login")}
+                >Seller</button>
             </div>
         </div>
         
