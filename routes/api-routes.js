@@ -1,8 +1,20 @@
 const express = require('express')
 const router = express.Router()
+const passport = require('../models/passport')
+const db = require('../models/user')
+const con = require('../config/config')
 const stripe = require('stripe')('sk_test_hg1F05jmDlxPvEQxgTaycRog00hZxp09SX');
 
-
+    router.post('/user', (req, res) => {
+        db.create(
+            req.body.username,
+            req.body.email,
+            req.body.password,
+         )
+         .then(result => {
+           res.json(result)
+         })
+    })
   router.post("/check", async (req, res) => {
     console.log("Request:", req.body);
     
