@@ -42,7 +42,12 @@ function HomePageCon() {
                 <span className="homeSelRe a">Re</span>
                 <span className="homeSelCom a">SELL</span>
             </h2>
+            <div className="userButton">
+                <button className="buyer">Buyer</button>
+                <button className="seller">Seller</button>
+            </div>
         </div>
+        
     )
 }
 

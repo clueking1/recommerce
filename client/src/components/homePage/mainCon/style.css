@@ -72,9 +72,58 @@
     font-size: 2vw;
 }
 
+.userButton {
+    width: 70vw;
+}
+
+.buyer {
+    width: 20vw;
+    padding: 10px 0;
+    float: left;
+    margin-left: 200px;
+    font-family: 'Lexend Tera', sans-serif;
+}
+
+.seller {
+    width: 20vw;
+    float: left;
+    padding: 10px 0;
+    margin-left: 10px;
+    font-family: 'Lexend Tera', sans-serif;
+}
+
+@media only screen and (max-width: 750px) {
+    .buyer {
+        width: 20vw;
+        padding: 5px 0;
+        float: left;
+        margin-left: 100px;
+    }
+    
+    .seller {
+        width: 20vw;
+        float: left;
+        padding: 5px 0;
+        margin-left: 10px;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .homeRev {
         margin-top: 30px;
         margin-left: 70%;
+    }
+    .buyer {
+        width: 20vw;
+        padding: 3px 0;
+        float: left;
+        margin-left: 50px;
+    }
+    
+    .seller {
+        width: 20vw;
+        float: left;
+        padding: 3px 0;
+        margin-left: 10px;
     }
 }
