@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
+import  { useHistory } from 'react-router-dom'
 import './style.css'
 
 function HomePageCon() {
-
+    const history = useHistory()
     const [op, setOp] = useState()
 
     useEffect(() => {
@@ -43,7 +44,10 @@ function HomePageCon() {
                 <span className="homeSelCom a">SELL</span>
             </h2>
             <div className="userButton">
-                <button className="buyer">Buyer</button>
+                <button 
+                    className="buyer" 
+                    onClick={() => history.push("/products")}
+                >Buyer</button>
                 <button className="seller">Seller</button>
             </div>
         </div>

@@ -82,6 +82,7 @@
     float: left;
     margin-left: 200px;
     font-family: 'Lexend Tera', sans-serif;
+    cursor: pointer;
 }
 
 .seller {
@@ -90,6 +91,7 @@
     padding: 10px 0;
     margin-left: 10px;
     font-family: 'Lexend Tera', sans-serif;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 750px) {
