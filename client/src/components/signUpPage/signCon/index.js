@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import API from '../../utils/API'
 import  { useHistory } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Alert } from 'reactstrap';
 import './style.css'
 
 function SignCon() {
@@ -106,7 +108,9 @@ function SignCon() {
                         onChange = {e => setPasswordCon(e.target.value) }
                     /><br />
                     <button className="sigBut" onClick={()=> handleSubmit()}>Sign Up</button><br />
-                    
+                    <Alert color={alertText.type} style={{ opacity: !alertText.there ? 0 : 1}}>
+                        {alertText.text}
+                    </Alert>
                 </div>
             </div>
         </div>
