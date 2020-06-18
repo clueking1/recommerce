@@ -1,17 +1,43 @@
-import React from 'react'
+import React, {useState} from 'react'
 import  { useHistory } from 'react-router-dom'
+import API from '../../utils/API'
+
 import './style.css'
 
 function LoginCon() {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
     const history = useHistory()
+
+    function handleSubmit() {
+        API.login({
+            username: username,
+            password: password
+        })
+        .then(res => {
+            console.log(res)
+        })
+    }
     return (
         <div className="loginConWrapper">
             <div className="loginContent">
                 <h2 className="loginHeader">Welcome, ReSeller!</h2>
                 <div className="loginInputs">
-                    <input className="userNameLog" placeholder="username"/><br />
-                    <input type="password" className="passwordLog" placeholder="password"/><br />
-                    <button className="loginBut">Login</button><br />
+                    <input 
+                        className="userNameLog" 
+                        placeholder="username"
+                        onChange = {e => setUsername(e.target.value) }
+                    /><br />
+                    <input 
+                        type="password" 
+                        className="passwordLog" 
+                        placeholder="password"
+                        onChange = {e => setPassword(e.target.value) }
+                    /><br />
+                    <button 
+                        className="loginBut"
+                        onClick={() => handleSubmit()}
+                    >Login</button><br />
                     <button 
                         className="resellerBut"
                         onClick={() => history.push('/signup')}

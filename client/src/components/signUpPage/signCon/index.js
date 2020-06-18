@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import API from '../../utils/API'
 import  { useHistory } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { Alert } from 'reactstrap';
 import './style.css'
 
@@ -68,11 +67,7 @@ function SignCon() {
                     type: 'danger'
                   })
             } else if(res.data === 'userCreated') {
-                setAlert({
-                    text:  "Welcome! Go back to login and login!",
-                    there:  true,
-                    type: 'success'
-                  })
+              history.push('/login')
                   
             } else {
                 return

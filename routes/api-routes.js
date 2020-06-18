@@ -15,6 +15,10 @@ const stripe = require('stripe')('sk_test_hg1F05jmDlxPvEQxgTaycRog00hZxp09SX');
            res.json(result)
          })
     })
+    router.post('/api/login', passport.authenticate('local'), (req, res) => {
+      
+        res.json(req.user[0])
+    })
   router.post("/check", async (req, res) => {
     console.log("Request:", req.body);
     
