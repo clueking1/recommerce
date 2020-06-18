@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './pages/home/home'
 import Login from './pages/login'
+import Signup from './pages/signup'
 import CheckOutPage from './pages/checkout'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Products from './pages/product/product'
@@ -24,6 +25,9 @@ function App() {
                     </Switch>
                     <Switch>
                         <Login path="/login"/>
+                    </Switch>
+                    <Switch>
+                        <Signup path="/signup"/>
                     </Switch>
                 </div>
             </Router>

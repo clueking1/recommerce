@@ -1,7 +1,9 @@
 import React from 'react'
+import  { useHistory } from 'react-router-dom'
 import './style.css'
 
 function LoginCon() {
+    const history = useHistory()
     return (
         <div className="loginConWrapper">
             <div className="loginContent">
@@ -10,7 +12,10 @@ function LoginCon() {
                     <input className="userNameLog" placeholder="username"/><br />
                     <input type="password" className="passwordLog" placeholder="password"/><br />
                     <button className="loginBut">Login</button><br />
-                    <button className="resellerBut">Become a ReSeller</button>
+                    <button 
+                        className="resellerBut"
+                        onClick={() => history.push('/signup')}
+                    >Become a ReSeller</button>
                 </div>
             </div>
         </div>
