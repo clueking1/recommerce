@@ -1,3 +1,4 @@
+import { Redirect } from "react-router-dom"
 
 function runGlobal(dis) {
         let atc = sessionStorage.getItem('atc')
@@ -6,6 +7,14 @@ function runGlobal(dis) {
                 JSON.parse(atc).map(t => dis({type: "saved", value: t.value, item: t.item, src: t.src, quantity: t.quantity}))
             }
 
+}
+function updateUser(dis) {
+    let atc = localStorage.getItem('user')
+
+    if (atc == true) {
+        dis({type: "loggedIn"})
+        return true
+    } 
 }
 
 function updateGlobal(sta) {
@@ -17,4 +26,4 @@ function updateGlobal(sta) {
 }
 
 
- export { runGlobal, updateGlobal}
+ export { runGlobal, updateGlobal, updateUser}

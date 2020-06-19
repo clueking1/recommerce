@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import  { useHistory } from 'react-router-dom'
 import API from '../../utils/API'
+import { useUserContext } from '../../utils/userStore'
+import { updateUser} from '../../utils/globalStore'
 
 import './style.css'
 
 function LoginCon() {
+    const [state, dispatch] = useUserContext()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const history = useHistory()
@@ -15,9 +18,12 @@ function LoginCon() {
             password: password
         })
         .then(res => {
-            console.log(res.status)
+            console.log(res)
             if (res.status === 200) {
-                history.push('/user')
+                localStorage.setItem('user', 'true')
+                dispatch({type: "loggedIn"})
+                console.log(state)
+                //history.push('/user')
             }
         })
     }

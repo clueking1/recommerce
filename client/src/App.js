@@ -7,35 +7,38 @@ import CheckOutPage from './pages/checkout'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Products from './pages/product/product'
 import { AtcProvider } from './components/utils/atcStore'
+import { UserProvider } from './components/utils/userStore'
 
 function App() {
 
     return (
-        <AtcProvider>
-            <Router>
-                <div className="appWrapper">
-          
-                    <Switch>
-                        <Home exact path="/"/>
-                    </Switch>
-                    <Switch>
-                        <Products path="/products"/>
-                    </Switch>
-                    <Switch>
-                        <CheckOutPage path="/checkout"/>
-                    </Switch>
-                    <Switch>
-                        <Login path="/login"/>
-                    </Switch>
-                    <Switch>
-                        <Signup path="/signup"/>
-                    </Switch>
-                    <Switch>
-                        <User path="/user"/>
-                    </Switch>
-                </div>
-            </Router>
-        </AtcProvider>
+        <UserProvider>
+            <AtcProvider>
+                <Router>
+                    <div className="appWrapper">
+            
+                        <Switch>
+                            <Home exact path="/"/>
+                        </Switch>
+                        <Switch>
+                            <Products path="/products"/>
+                        </Switch>
+                        <Switch>
+                            <CheckOutPage path="/checkout"/>
+                        </Switch>
+                        <Switch>
+                            <Login path="/login"/>
+                        </Switch>
+                        <Switch>
+                            <Signup path="/signup"/>
+                        </Switch>
+                        <Switch>
+                            <User path="/user"/>
+                        </Switch>
+                    </div>
+                </Router>
+            </AtcProvider>
+        </UserProvider>
     )
 }
 
