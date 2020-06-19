@@ -2,12 +2,10 @@ import React, {useState} from 'react'
 import  { useHistory } from 'react-router-dom'
 import API from '../../utils/API'
 import { useUserContext } from '../../utils/userStore'
-import { updateUser} from '../../utils/globalStore'
-
 import './style.css'
 
 function LoginCon() {
-    const [state, dispatch] = useUserContext()
+    const [, dispatch] = useUserContext()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const history = useHistory()

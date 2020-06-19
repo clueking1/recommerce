@@ -4,6 +4,13 @@ import './style.css'
 
 function Navbar() {
     const history = useHistory()
+    function loggedIn() {
+        if (localStorage.getItem("user") === "true") {
+            history.push('/user')
+        } else {
+            history.push('/login')
+        }
+    }
     return (
         <nav className="navBar">
             <div className="navTitleDiv">
@@ -24,7 +31,7 @@ function Navbar() {
                 <i 
                     class="fa fa-user" 
                     aria-hidden="true"
-                    onClick={() => history.push('/login')}
+                    onClick={() => loggedIn()}
                 ></i>
             </div>
         </nav>

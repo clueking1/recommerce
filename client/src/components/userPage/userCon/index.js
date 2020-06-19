@@ -6,12 +6,12 @@ import { useUserContext } from '../../utils/userStore'
 
 function UserCon() {
     const history = useHistory()
-    const [, dispatch] = useUserContext()
+    const [state, dispatch2] = useUserContext()
+    console.log(state)
     function logout() {
-        
-            localStorage.setItem('user', 'false')
-            dispatch({type: "loggedOut"})
-            history.push('/')
+        localStorage.setItem('user', 'false')
+        dispatch2({type: "loggedOut"})
+        history.push('/')
 
     }
     return (

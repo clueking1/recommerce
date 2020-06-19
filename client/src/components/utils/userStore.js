@@ -1,16 +1,17 @@
 import React, {createContext, useReducer, useContext} from 'react'
 
 const UserStore = createContext({
-    loggedIn : false
+    loggedIn : "false"
 })
 const { Provider } = UserStore
 
 const reducer = (state, action) => {
+    console.log(action)
     switch(action.type) {
         case "loggedIn":
-            return state.loggedIn = true
+            return UserStore.loggedIn = "true"
         case "loggedOut":
-           return state.loggedIn = false
+           return UserStore.loggedIn = "false"
         default:
             return state
     }

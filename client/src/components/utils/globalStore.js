@@ -1,4 +1,4 @@
-import { Redirect } from "react-router-dom"
+
 
 function runGlobal(dis) {
         let atc = sessionStorage.getItem('atc')
@@ -8,14 +8,7 @@ function runGlobal(dis) {
             }
 
 }
-function updateUser(dis) {
-    let atc = localStorage.getItem('user')
 
-    if (atc == true) {
-        dis({type: "loggedIn"})
-        return true
-    } 
-}
 
 function updateGlobal(sta) {
 
@@ -26,4 +19,4 @@ function updateGlobal(sta) {
 }
 
 
- export { runGlobal, updateGlobal, updateUser}
+ export { runGlobal, updateGlobal }
