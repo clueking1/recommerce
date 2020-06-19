@@ -15,7 +15,10 @@ function LoginCon() {
             password: password
         })
         .then(res => {
-            console.log(res)
+            console.log(res.status)
+            if (res.status === 200) {
+                history.push('/user')
+            }
         })
     }
     return (

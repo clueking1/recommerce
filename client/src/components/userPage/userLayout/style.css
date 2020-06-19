@@ -1,0 +1,25 @@
+.loginWrapper {
+    height: 100%;
+    width: 100%;
+    overflow:auto; 
+    background-image: url("./assets/embossed-diamond.png");
+ 
+}
+
+.loginColor {
+    height: 100%;
+    width: 100%;
+    background-image:-webkit-linear-gradient(90deg, rgba(15, 15, 15, 0.87), rgba(22, 59, 90, 0.856));
+    background-image:(90deg, rgba(15, 15, 15, 0.87), rgba(22, 59, 90, 0.856));
+    overflow: auto;
+}
+
+@media only screen and (max-width: 1056px) {
+    .loginWrapper {
+        height: 100%;
+        width: 100%;
+        overflow:auto; 
+        background-image: url("./assets/embossed-diamond.png");
+        display: table;
+    }
+}
