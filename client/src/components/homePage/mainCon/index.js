@@ -30,6 +30,14 @@ function HomePageCon() {
          
     }, [])
 
+    function loggedIn() {
+        if (localStorage.getItem("user") === "true") {
+            history.push('/user')
+        } else {
+            history.push('/login')
+        }
+    }
+
     return (
         <div className="homePageCon">
             <h2 className="homeTitle">
@@ -53,7 +61,7 @@ function HomePageCon() {
                 <button 
                     className="seller"
                     style = {op}
-                    onClick={() => history.push("/login")}
+                    onClick={() => loggedIn()}
                 >Seller</button>
             </div>
         </div>

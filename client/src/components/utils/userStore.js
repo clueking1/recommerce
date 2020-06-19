@@ -6,7 +6,7 @@ const UserStore = createContext({
 const { Provider } = UserStore
 
 const reducer = (state, action) => {
-    console.log(action)
+
     switch(action.type) {
         case "loggedIn":
             return UserStore.loggedIn = "true"
