@@ -22,8 +22,7 @@ function LoginCon() {
             if (res.status === 200) {
                 localStorage.setItem('user', 'true')
                 dispatch({type: "loggedIn"})
-                console.log(state)
-                //history.push('/user')
+                history.push('/user')
             }
         })
     }

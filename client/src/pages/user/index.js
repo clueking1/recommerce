@@ -13,14 +13,19 @@ function User() {
     const history = useHistory()
     const [state, dispatch] = useAtcContext()
     const [stateUser] = useUserContext()
-
+    let atc = localStorage.getItem('user')
     useEffect(() => {
         runGlobal(dispatch)
     }, [dispatch])
     useEffect(() => {
-       const hey = updateUser(dispatch)
-        console.log(hey)
-    }, [dispatch])
+
+        if (atc === "true") {
+            dispatch({type: "loggedIn"})
+        } else {
+            history.push('/')
+        }
+       
+    }, [atc])
     
 
     
