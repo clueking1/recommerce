@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+
+.uploadDiv {
+    font-family: 'Lexend Tera', sans-serif;
+    width: 900px;
+    margin: 0 auto;
+    color: white;
+}
+
+.uploadHeader {
+    font-family: 'Lexend Tera', sans-serif;
+    font-size: 1.7em;
+    color: white;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    width: 90%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.616);
+}
+.itemIn {
+    padding: 10px 0;
+}
+.itemValLa {
+    margin-left: 30px;
+}
+
+.itemVal {
+    margin-right: 30px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+
+
+#img {
+    margin-left: 20px;
+    padding: 10px 0;
+    font-family: 'Lexend Tera', sans-serif;
+    font-size: .9em;
+    width: 99px
+}
+
+.uploadBut {
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.uploadInputs {
+    width: 750px;
+    margin: 0 auto;
+}
+.itemSub {
+    font-family: 'Lexend Tera', sans-serif;
+    cursor: pointer;
+    width: 150px;
+    padding: 10px 0;
+}
+
+.imgLa {
+    margin-left: 60px;
+}
+
