@@ -34,8 +34,8 @@ const { Store } = require('express-session')
             req.body.img,
             req.user[0].userId
         )
-        .then(res => {
-            res.json('success')
+        .then(results => {
+            res.json(results)
         })
     })
     router.get('/checklog', isAuthenticated,  (req, res) => {

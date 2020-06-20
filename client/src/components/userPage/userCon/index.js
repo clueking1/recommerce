@@ -16,9 +16,9 @@ const fileToDataUri = (file) => new Promise((resolve, reject) => {
 function UserCon() {
     const history = useHistory()
     const [, dispatch2] = useUserContext()
-    const [item, setItem] = useState('')
-    const [value, setValue] = useState(0)
-    const [dataUri, setDataUri] = useState('')
+    const [item, setItem] = useState()
+    const [value, setValue] = useState()
+    const [dataUri, setDataUri] = useState()
 
 
     async function loguserout() {
