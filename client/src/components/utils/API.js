@@ -57,4 +57,16 @@ export default {
         
           })
       },
+      upload: function(postdata) {
+        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+        return axios({
+            method: 'post',
+            headers: { 'content-type': 'application/json',
+            "Access-Control-Allow-Origin" : "*"
+        },
+            url: '/upload',
+            credentials : 'same-origin',
+            data: postdata
+          })
+      },
 }

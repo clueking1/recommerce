@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const passport = require('../models/passport')
 const db = require('../models/user')
+const upload = require('../models/uploadImage')
 const con = require('../config/config')
 const stripe = require('stripe')('sk_test_hg1F05jmDlxPvEQxgTaycRog00hZxp09SX');
 const isAuthenticated = require('../models/middleware/isAuth')
@@ -19,11 +20,23 @@ const { Store } = require('express-session')
          })
     })
     router.post('/api/login', passport.authenticate('local'), (req, res) => {
+        console.log(req.user[0])
         res.json(req.user[0])
     })
     router.get('/logout', (req, res) => {
         req.logout()
         res.json(req.user)
+    })
+    router.post('/upload', (req, res) => {
+        upload.upload(
+            req.body.item,
+            req.body.value,
+            req.body.img,
+            req.user[0].userId
+        )
+        .then(res => {
+            res.json('success')
+        })
     })
     router.get('/checklog', isAuthenticated,  (req, res) => {
        
