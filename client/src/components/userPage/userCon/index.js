@@ -1,22 +1,28 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { useUserContext } from '../../utils/userStore'
-
+import API from '../../utils/API'
 
 
 function UserCon() {
     const history = useHistory()
-    const [state, dispatch2] = useUserContext()
-    console.log(state)
-    function logout() {
-        localStorage.setItem('user', 'false')
-        dispatch2({type: "loggedOut"})
-        history.push('/')
+    const [, dispatch2] = useUserContext()
+
+
+    async function loguserout() {
+        await API.logout()
+        .then(res => {
+            if (res.data === null) {
+                dispatch2({type: "loggedOut"})
+                history.push('/')
+            }
+            
+        })
 
     }
     return (
         <div>
-            <button onClick={() => logout()}>Log Out</button>
+            <button onClick={() => loguserout()}>Log Out</button>
         </div>
     )
 }

@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import  { useHistory } from 'react-router-dom'
+import API from '../../utils/API'
 import './style.css'
 
 function HomePageCon() {
     const history = useHistory()
     const [op, setOp] = useState()
+
 
     useEffect(() => {
         let color = 1 
@@ -30,12 +32,15 @@ function HomePageCon() {
          
     }, [])
 
-    function loggedIn() {
-        if (localStorage.getItem("user") === "true") {
-            history.push('/user')
-        } else {
-            history.push('/login')
-        }
+    async function loggedIn() {
+        await API.checklog()
+         .then(res => {
+            if (res.data === "no") {
+                history.push('/login')
+            } else {
+                history.push('/user')
+            }
+        })
     }
 
     return (

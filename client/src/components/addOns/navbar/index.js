@@ -1,15 +1,20 @@
 import React from 'react'
 import  { useHistory } from 'react-router-dom'
+import API from '../../utils/API'
 import './style.css'
 
 function Navbar() {
     const history = useHistory()
-    function loggedIn() {
-        if (localStorage.getItem("user") === "true") {
-            history.push('/user')
-        } else {
-            history.push('/login')
-        }
+
+    async function loggedIn() {
+        await API.checklog()
+            .then(res => {
+            if (res.data === "no") {
+                history.push('/login')
+            } else {
+                history.push('/user')
+            }
+        })
     }
     return (
         <nav className="navBar">

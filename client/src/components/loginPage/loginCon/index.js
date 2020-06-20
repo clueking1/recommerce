@@ -16,8 +16,7 @@ function LoginCon() {
             password: password
         })
         .then(res => {
-           if (res.status === 200) {
-                localStorage.setItem('user', 'true')
+            if (res.status === 200) {
                 dispatch({type: "loggedIn"})
                 history.push('/user')
             }

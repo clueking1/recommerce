@@ -4,6 +4,9 @@ const passport = require('../models/passport')
 const db = require('../models/user')
 const con = require('../config/config')
 const stripe = require('stripe')('sk_test_hg1F05jmDlxPvEQxgTaycRog00hZxp09SX');
+const isAuthenticated = require('../models/middleware/isAuth')
+
+const { Store } = require('express-session')
 
     router.post('/user', (req, res) => {
         db.create(
@@ -16,42 +19,48 @@ const stripe = require('stripe')('sk_test_hg1F05jmDlxPvEQxgTaycRog00hZxp09SX');
          })
     })
     router.post('/api/login', passport.authenticate('local'), (req, res) => {
-      
         res.json(req.user[0])
     })
-  router.post("/check", async (req, res) => {
-    console.log("Request:", req.body);
+    router.get('/logout', (req, res) => {
+        req.logout()
+        res.json(req.user)
+    })
+    router.get('/checklog', isAuthenticated,  (req, res) => {
+       
+    })
+//   router.post("/check", async (req, res) => {
+//     console.log("Request:", req.body);
     
-    let error;
-    let status;
-    try {
-      const { token, amount } = req.body;
+//     let error;
+//     let status;
+//     try {
+//       const { token, amount } = req.body;
   
-      const customer = await stripe.customers.create({
-        email: token.email,
-        source: token.id
-      });
+//       const customer = await stripe.customers.create({
+//         email: token.email,
+//         source: token.id
+//       });
   
-      //const idempotency_key = uuid();
-      const charge = await stripe.charges.create(
-        {
-          amount: amount * 100,
-          currency: "usd",
-          customer: customer.id,
-          receipt_email: token.email,
-          description: `Purchased the `,
+//       //const idempotency_key = uuid();
+//       const charge = await stripe.charges.create(
+//         {
+//           amount: amount * 100,
+//           currency: "usd",
+//           customer: customer.id,
+//           receipt_email: token.email,
+//           description: `Purchased the `,
           
-        }
-      );
-      console.log("Charge:", { charge });
-      status = "success";
-    } catch (error) {
-      console.error("Error:", error);
-      status = "failure";
-    }
+//         }
+//       );
+//       console.log("Charge:", { charge });
+//       status = "success";
+//     } catch (error) {
+//       console.error("Error:", error);
+//       status = "failure";
+//     }
   
-    res.json({ error, status });
-  });
+//     res.json({ error, status });
+//   });
 
 
 module.exports = router

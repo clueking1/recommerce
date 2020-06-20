@@ -8,10 +8,11 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Products from './pages/product/product'
 import { AtcProvider } from './components/utils/atcStore'
 import { UserProvider } from './components/utils/userStore'
-
+import { CookiesProvider } from 'react-cookie'
 function App() {
 
     return (
+        <CookiesProvider>
         <UserProvider>
             <AtcProvider>
                 <Router>
@@ -39,6 +40,7 @@ function App() {
                 </Router>
             </AtcProvider>
         </UserProvider>
+        </CookiesProvider>
     )
 }
 

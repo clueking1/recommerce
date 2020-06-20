@@ -25,10 +25,36 @@ export default {
           console.log(postdata)
         return axios({
             method: 'post',
-            headers: { 'content-type': 'application/json' },
-            url: 'http://localhost:7001/api/login',
+            headers: { 'content-type': 'application/json',
+            "Access-Control-Allow-Origin" : "*"
+        },
+            url: '/api/login',
+            credentials : 'same-origin',
             data: postdata
           })
     
+      },
+      logout: function() {
+         return axios({
+            method: 'get',
+            headers: { 'content-type': 'application/json',
+            "Access-Control-Allow-Origin" : "*"
+        },
+            url: '/logout',
+            credentials : 'same-origin',
+        
+          })
+      },
+      checklog: function() {
+        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+        return axios({
+            method: 'get',
+            headers: { 'content-type': 'application/json',
+            "Access-Control-Allow-Origin" : "*"
+        },
+            url: '/checklog',
+            credentials : 'same-origin',
+        
+          })
       },
 }
