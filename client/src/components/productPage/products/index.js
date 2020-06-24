@@ -5,20 +5,23 @@ import './style.css'
 
 
 function ViewProducts(props) {
-    console.log(props)
+    
     const [state, dispatch] = useAtcContext()
+    console.log(state)
     const [flip, setFlip] = useState(true)
         useEffect(() => {
+            console.log('awwww1')
             runGlobal(dispatch)
         }, [dispatch])
 
         useEffect(() => {
+            console.log('awwww2')
             updateGlobal(state)
         }, [state])
         
 
        function stateLen(it) {
-           console.log(it)
+           console.log('awwww')
             if (state.length === 0) {
                 dispatch({type: "add", value: it.value, item: it.item, src: it.src, id: it.id })
                 setFlip(!flip)
@@ -28,8 +31,8 @@ function ViewProducts(props) {
         }
         
       function plusAdd(it) {
-
-        let index = state.map(e =>  e.src).indexOf(it.src)
+        console.log('awwww4')
+        let index = state.map(e =>  e.id).indexOf(it.id)
         
         if (index !== -1) {
             dispatch({type: "plus", src: it.src, oSrc: index})
@@ -61,71 +64,7 @@ function ViewProducts(props) {
              </div>
 
             ))}
-            <div className="productOne" >
-                <img className="productImg" alt="iphoneX" src={require('./assets/imageIphoneX.jpeg')} />
-                
-                
-                <div className="productTitle" >
-                    <h3>Iphone X</h3>
-                </div>
-                <div className="addToCart">
-                    <button 
-                    value="150" 
-                    className="addToCartBut"
-                    onClick={() => stateLen(
-                        { type: "add", value: 150, item: "Iphone X", src: "IphoneWhite"}
-                    )}
-                    >Add To Cart $150</button>
-                </div>
-            </div>
-            <div className="productOne">
-                <img className="productImg" alt="iphoneX" src={require('./assets/iphone11.jpg')} />
-
-                <div className="productTitle" >
-                    <h3>Iphone 11</h3>
-                </div>
-                <div className="addToCart">
-                    <button 
-                    value="250" 
-                    className="addToCartBut"
-                    onClick={() => stateLen(
-                        { type: "add", value: 250, item: "Iphone 11", src: "Iphone11", quan: 1}
-                    )}
-                    >Add To Cart $250</button>
-                </div>
-            </div>
-            <div className="productOne">
-                <img className="productImg" alt="iphoneX" src={require('./assets/iphoneBlack.jpeg')} />
-
-                <div className="productTitle" >
-                    <h3>Iphone X</h3>
-                </div>
-                <div className="addToCart">
-                    <button 
-                    value="150" 
-                    className="addToCartBut"
-                    onClick={() => stateLen(
-                        { type: "add", value: 150, item: "Iphone X", src: "IphoneBlack"}
-                    )}
-                    >Add To Cart $150</button>
-                </div>
-            </div>
-            <div className="productOne">
-                <img className="productImg" alt="iphoneX" src={require('./assets/iphoneBlack.jpeg')} />
-
-                <div className="productTitle" >
-                    <h3>Iphone X</h3>
-                </div>
-                <div className="addToCart">
-                    <button 
-                    value="150" 
-                    className="addToCartBut"
-                    onClick={() => stateLen(
-                        { type: "add", value: 150, item: "Iphone X", src: "IphoneBlack"}
-                    )}
-                    >Add To Cart $150</button>
-                </div>
-            </div>
+            
         </div>
     )
 }
