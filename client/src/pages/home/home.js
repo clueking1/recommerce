@@ -17,7 +17,7 @@ function Home() {
 
     useEffect(() => {
        async function check() {
-            const heloo =  await API.checklog()
+            await API.checklog()
         .then(res => {
             console.log(res)
         })

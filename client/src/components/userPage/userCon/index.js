@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { useAtcContext } from '../../utils/atcStore'
-import Amplify, { Auth, Storage } from "aws-amplify"
+import { useUserContext } from '../../utils/userStore'
 import API from '../../utils/API'
 import './style.css'
 
@@ -11,15 +10,12 @@ const fileToDataUri = (file) => new Promise((resolve, reject) => {
     reader.onload = (event) => {
       resolve(event.target.result)
     };
-    //reader.readAsDataURL(file);
-    console.log(reader.readAsDataURL(file))
+    reader.readAsDataURL(file);
 })
-
-
 
 function UserCon() {
     const history = useHistory()
-    const [state, dispatch] = useAtcContext()
+    const [, dispatch] = useUserContext()
     const [item, setItem] = useState()
     const [userItems, setUserItems] = useState()
     const [value, setValue] = useState()
@@ -59,8 +55,7 @@ function UserCon() {
           
       }
       async function uploadItem() {
-        
-          await API.upload({
+        await API.upload({
               item: item,
               value: value,
               img: dataUri
@@ -69,7 +64,7 @@ function UserCon() {
               console.log(res)
           })
       }
-      console.log(dataUri)
+
     return (
         <div>
             <button onClick={() => loguserout()}>Log Out</button>
