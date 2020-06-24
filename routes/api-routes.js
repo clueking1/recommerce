@@ -47,6 +47,12 @@ const { Store } = require('express-session')
             res.json(results)
        })
     })
+    router.get('/userProd', (req, res) => {
+        con.query("SELECT * FROM photo WHERE userId = ?",[req.user[0].userId], (err, data) => {
+            if (err) throw err
+            res.json(data)
+        })
+     })
 //   router.post("/check", async (req, res) => {
 //     console.log("Request:", req.body);
     

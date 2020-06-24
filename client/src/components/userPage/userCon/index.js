@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { useUserContext } from '../../utils/userStore'
+import { useAtcContext } from '../../utils/atcStore'
 import Amplify, { Auth, Storage } from "aws-amplify"
 import API from '../../utils/API'
 import './style.css'
@@ -15,34 +15,28 @@ const fileToDataUri = (file) => new Promise((resolve, reject) => {
     console.log(reader.readAsDataURL(file))
 })
 
-Amplify.configure({
-    Auth: {
-        identityPoolId: 'us-east-1_Afgyebezr', //REQUIRED - Amazon Cognito Identity Pool ID
-        region: 'us-east-2', // REQUIRED - Amazon Cognito Region
-        userPoolId: 'XX-XXXX-X_abcd1234', //OPTIONAL - Amazon Cognito User Pool ID
-        userPoolWebClientId: 'XX-XXXX-X_abcd1234', //OPTIONAL - Amazon Cognito Web Client ID
-    },
-    Storage: {
-        AWSS3: {
-            bucket: 'recommerceimages', //REQUIRED -  Amazon S3 bucket
-            region: 'us-east-1', //OPTIONAL -  Amazon service region
-        }
-    }
-});
+
 
 function UserCon() {
     const history = useHistory()
-    const [, dispatch2] = useUserContext()
+    const [state, dispatch] = useAtcContext()
     const [item, setItem] = useState()
+    const [userItems, setUserItems] = useState()
     const [value, setValue] = useState()
     const [dataUri, setDataUri] = useState()
     
+    useEffect(() => {
+        API.getProd()
+        .then(res => {
+            setUserItems(res.data)
+        })
+    },[])
 
     async function loguserout() {
         await API.logout()
         .then(res => {
             if (res.data === null) {
-                dispatch2({type: "loggedOut"})
+                //dispatch2({type: "loggedOut"})
                 history.push('/')
             }
             
@@ -112,9 +106,40 @@ function UserCon() {
                     >ReSell Item</button>
                 </div>
                 
-                <img src={dataUri} />
+                
             </div>
-
+            <h2 className="uploadHeader">Your Items</h2>
+                {userItems === undefined ? undefined : 
+                <div>
+                    {console.log(userItems)}
+                    {userItems.map(t => (
+                        <div className="productInfoWrapper" key={t.id}>
+                            <img className="coImg" alt="prodImage" src={t.img} />
+                            <div className="sellingInfo">
+                            
+                                <div className="prodNameDiv">
+                                    
+                                        <p className="productNameTit">Item</p> 
+                                        <p className="productName">{t.item}</p> 
+                                    
+                                </div>
+                                <div className="prodValDiv">
+                                    
+                                        <p className="productValueTit">Price</p> 
+                                        <p className="productValue">${t.value}</p> 
+                                    
+                                </div>
+                            
+                                    
+                                
+                                
+                            </div>
+                        </div>
+                    ))}
+              
+                
+                </div>
+            }
         </div>
     )
 }

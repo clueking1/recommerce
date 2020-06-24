@@ -81,4 +81,16 @@ export default {
         
           })
       },
+      getProd: function() {
+        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+        return axios({
+            method: 'get',
+            headers: { 'content-type': 'application/json',
+            "Access-Control-Allow-Origin" : "*"
+        },
+            url: '/userProd',
+            credentials : 'same-origin',
+        
+          })
+      },
 }
