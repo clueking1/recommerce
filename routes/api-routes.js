@@ -38,8 +38,14 @@ const { Store } = require('express-session')
             res.json(results)
         })
     })
-    router.get('/checklog', isAuthenticated,  (req, res) => {
-       
+    router.get('/checklog', isAuthenticated, (rq, res) => {
+        
+    })
+    router.get('/items', (req, res) => {
+       upload.images()
+       .then(results => {
+            res.json(results)
+       })
     })
 //   router.post("/check", async (req, res) => {
 //     console.log("Request:", req.body);

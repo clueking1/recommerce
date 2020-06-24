@@ -4,8 +4,8 @@ import { runGlobal, updateGlobal} from '../../utils/globalStore'
 import './style.css'
 
 
-function ViewProducts() {
-
+function ViewProducts(props) {
+    console.log(props)
     const [state, dispatch] = useAtcContext()
     const [flip, setFlip] = useState(true)
         useEffect(() => {
@@ -15,7 +15,7 @@ function ViewProducts() {
         useEffect(() => {
             updateGlobal(state)
         }, [state])
-
+        
 
        function stateLen(it) {
             if (state.length === 0) {
@@ -40,7 +40,26 @@ function ViewProducts() {
 
     return (
         <div className="productsWrapper">
+            {props.items.map(t => (
+                 <div className="productOne"  key={t.photoId}>
+                 <img className="productImg" alt="iphoneX" src={t.img} />
+                 
+                 
+                 <div className="productTitle" >
+                     <h3>Iphone X</h3>
+                 </div>
+                 <div className="addToCart">
+                     <button 
+                     value="150" 
+                     className="addToCartBut"
+                     onClick={() => stateLen(
+                         { type: "add", value: t.value, item: t.item, src: t.img}
+                     )}
+                     >Add To Cart ${t.value}</button>
+                 </div>
+             </div>
 
+            ))}
             <div className="productOne" >
                 <img className="productImg" alt="iphoneX" src={require('./assets/imageIphoneX.jpeg')} />
                 
@@ -58,7 +77,7 @@ function ViewProducts() {
                     >Add To Cart $150</button>
                 </div>
             </div>
-            <div className="productTwo">
+            <div className="productOne">
                 <img className="productImg" alt="iphoneX" src={require('./assets/iphone11.jpg')} />
 
                 <div className="productTitle" >
@@ -74,7 +93,23 @@ function ViewProducts() {
                     >Add To Cart $250</button>
                 </div>
             </div>
-            <div className="productThree">
+            <div className="productOne">
+                <img className="productImg" alt="iphoneX" src={require('./assets/iphoneBlack.jpeg')} />
+
+                <div className="productTitle" >
+                    <h3>Iphone X</h3>
+                </div>
+                <div className="addToCart">
+                    <button 
+                    value="150" 
+                    className="addToCartBut"
+                    onClick={() => stateLen(
+                        { type: "add", value: 150, item: "Iphone X", src: "IphoneBlack"}
+                    )}
+                    >Add To Cart $150</button>
+                </div>
+            </div>
+            <div className="productOne">
                 <img className="productImg" alt="iphoneX" src={require('./assets/iphoneBlack.jpeg')} />
 
                 <div className="productTitle" >

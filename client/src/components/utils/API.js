@@ -69,4 +69,16 @@ export default {
             data: postdata
           })
       },
+      getImages: function() {
+        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+        return axios({
+            method: 'get',
+            headers: { 'content-type': 'application/json',
+            "Access-Control-Allow-Origin" : "*"
+        },
+            url: '/items',
+            credentials : 'same-origin',
+        
+          })
+      },
 }

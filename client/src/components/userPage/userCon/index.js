@@ -1,17 +1,34 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useUserContext } from '../../utils/userStore'
+import Amplify, { Auth, Storage } from "aws-amplify"
 import API from '../../utils/API'
 import './style.css'
+
 
 const fileToDataUri = (file) => new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (event) => {
       resolve(event.target.result)
     };
-    console.log(reader.readAsDataURL(file));
-    })
+    //reader.readAsDataURL(file);
+    console.log(reader.readAsDataURL(file))
+})
 
+Amplify.configure({
+    Auth: {
+        identityPoolId: 'us-east-1_Afgyebezr', //REQUIRED - Amazon Cognito Identity Pool ID
+        region: 'us-east-2', // REQUIRED - Amazon Cognito Region
+        userPoolId: 'XX-XXXX-X_abcd1234', //OPTIONAL - Amazon Cognito User Pool ID
+        userPoolWebClientId: 'XX-XXXX-X_abcd1234', //OPTIONAL - Amazon Cognito Web Client ID
+    },
+    Storage: {
+        AWSS3: {
+            bucket: 'recommerceimages', //REQUIRED -  Amazon S3 bucket
+            region: 'us-east-1', //OPTIONAL -  Amazon service region
+        }
+    }
+});
 
 function UserCon() {
     const history = useHistory()
@@ -19,7 +36,7 @@ function UserCon() {
     const [item, setItem] = useState()
     const [value, setValue] = useState()
     const [dataUri, setDataUri] = useState()
-
+    
 
     async function loguserout() {
         await API.logout()
@@ -33,8 +50,8 @@ function UserCon() {
 
     }
 
-    const uploadImage = (file) => {
-    
+    const uploadImage = async (file) => {
+        
         if(!file) {
           setDataUri('');
           return;
@@ -44,11 +61,12 @@ function UserCon() {
           .then(dataUri => {
             setDataUri(dataUri)
             
-          })
+        })
           
       }
       async function uploadItem() {
-       await API.upload({
+        
+          await API.upload({
               item: item,
               value: value,
               img: dataUri
@@ -57,7 +75,7 @@ function UserCon() {
               console.log(res)
           })
       }
-
+      console.log(dataUri)
     return (
         <div>
             <button onClick={() => loguserout()}>Log Out</button>
@@ -94,6 +112,7 @@ function UserCon() {
                     >ReSell Item</button>
                 </div>
                 
+                <img src={dataUri} />
             </div>
 
         </div>
