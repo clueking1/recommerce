@@ -18,8 +18,9 @@ function ViewProducts(props) {
         
 
        function stateLen(it) {
+           console.log(it)
             if (state.length === 0) {
-                dispatch({type: "add", value: it.value, item: it.item, src: it.src})
+                dispatch({type: "add", value: it.value, item: it.item, src: it.src, id: it.id })
                 setFlip(!flip)
             } else {
                 plusAdd(it) 
@@ -33,7 +34,7 @@ function ViewProducts(props) {
         if (index !== -1) {
             dispatch({type: "plus", src: it.src, oSrc: index})
         } else {
-            dispatch({type: "add", value: it.value, item: it.item, src: it.src})
+            dispatch({type: "add", value: it.value, item: it.item, src: it.src, id:it.id })
         }
         setFlip(!flip)
       }
@@ -46,14 +47,14 @@ function ViewProducts(props) {
                  
                  
                  <div className="productTitle" >
-                     <h3>Iphone X</h3>
+                     <h3>{t.item}</h3>
                  </div>
                  <div className="addToCart">
                      <button 
                      value="150" 
                      className="addToCartBut"
                      onClick={() => stateLen(
-                         { type: "add", value: t.value, item: t.item, src: t.img}
+                         { type: "add", value: t.value, item: t.item, src: t.img, id:t.photoId}
                      )}
                      >Add To Cart ${t.value}</button>
                  </div>

@@ -4,7 +4,7 @@ function runGlobal(dis) {
         let atc = sessionStorage.getItem('atc')
 
             if (JSON.parse(atc) !== null) {
-                JSON.parse(atc).map(t => dis({type: "saved", value: t.value, item: t.item, src: t.src, quantity: t.quantity}))
+                JSON.parse(atc).map(t => dis({type: "saved", value: t.value, item: t.item, src: t.src, quantity: t.quantity, id: t.id}))
             }
 
 }

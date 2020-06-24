@@ -4,11 +4,13 @@ const AtcStore = createContext({
     item: "",
     value: 0,
     src: "",
+    id: 0,
     quantity: 0
 })
 const { Provider } = AtcStore
 
 const reducer = (state, action) => {
+    console.log(action)
     switch(action.type) {
         case "add":
             return [
@@ -17,6 +19,7 @@ const reducer = (state, action) => {
                     item: action.item,
                     value: action.value,
                     src: action.src,
+                    id: action.id,
                     quantity: 1
                 }
             ]
@@ -38,6 +41,7 @@ const reducer = (state, action) => {
                     item: action.item,
                     value: action.value,
                     src: action.src,
+                    id: action.id,
                     quantity: action.quantity
                 }
             ]
