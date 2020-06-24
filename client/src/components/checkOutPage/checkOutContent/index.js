@@ -2,25 +2,12 @@ import React, { useState,useEffect } from 'react'
 import { useAtcContext } from '../../utils/atcStore'
 import { updateGlobal} from '../../utils/globalStore'
 import './style.css'
-import iphoneWhite from '../../productPage/products/assets/imageIphoneX.jpeg'
-import iphoneBlack from '../../productPage/products/assets/iphoneBlack.jpeg'
-import iphone11 from '../../productPage/products/assets/iphone11.jpg'
 //import PaymentPage from '../../../pages/payment'
 import PaypalBut from '../../addOns/paypalBut'
 
 function CoContent() {
     const [state, dispatch] = useAtcContext()
     let [tot, setTot] = useState(0)
-
-    function image(img) {
-        if (img === "IphoneWhite") {
-            return iphoneWhite
-        } else if (img === "IphoneBlack") {
-            return iphoneBlack
-        } else {
-            return iphone11
-        }
-    }
 
     useEffect(() => {
         updateGlobal(state)
@@ -64,7 +51,7 @@ function CoContent() {
             </div>
             {state.map(t => (
                 <div className="productInfoWrapper" key={t.src}>
-                    <img className="coImg" alt="prodImage" src={image(t.src)} />
+                    <img className="coImg" alt="prodImage" src={t.src} />
                     <div className="productInfo">
                     
                         <div className="prodNameDiv">
