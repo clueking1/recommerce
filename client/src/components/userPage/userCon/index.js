@@ -20,13 +20,23 @@ function UserCon() {
     const [userItems, setUserItems] = useState()
     const [value, setValue] = useState()
     const [dataUri, setDataUri] = useState()
-    
+    const [breakIt, setBreakIt] = useState()
+    const [w, setW] = useState(window.innerWidth)
     useEffect(() => {
         API.getProd()
         .then(res => {
             setUserItems(res.data)
         })
     },[])
+
+    useEffect(() => {
+        console.log(w)
+        if (w <= 1000) {
+            setBreakIt({display:"inline"})
+        } else {
+            setBreakIt({display:"none"})
+        }
+    },[w])
 
     async function loguserout() {
         await API.logout()
@@ -64,7 +74,7 @@ function UserCon() {
               console.log(res)
           })
       }
-
+      
     return (
         <div>
             <button onClick={() => loguserout()}>Log Out</button>
@@ -77,21 +87,24 @@ function UserCon() {
                         className="itemIn" 
                         onChange={(e) => setItem(e.target.value)}
                     />
+                    {/* <br style={breakIt} /> */}
                     <label className="itemValLa">$</label>
                     <input 
                         type="text" 
                         className="itemVal" 
                         onChange={(e) => setValue(Number(e.target.value))}
                     />
-                    <label classname="imgLa" for="img">Select image:</label>
-                    <input 
-                        classname="imgIn" 
-                        type="file" 
-                        id="img" 
-                        name="img"
-                        onChange={e => uploadImage(e.target.files[0])}
-                        accept="image/*"
-                    ></input><br />
+                    
+                        <label classname="imgLa" for="img">Select image:</label>
+                        <input 
+                            classname="imgIn" 
+                            type="file" 
+                            id="img" 
+                            name="img"
+                            onChange={e => uploadImage(e.target.files[0])}
+                            accept="image/*"
+                        ></input><br />
+                    
                 </div>
                 <div className="uploadBut">
                     <button 
@@ -108,23 +121,25 @@ function UserCon() {
                 <div>
                     {console.log(userItems)}
                     {userItems.map(t => (
-                        <div className="productInfoWrapper" key={t.id}>
-                            <img className="coImg" alt="prodImage" src={t.img} />
+                        <div className="sellInfoWrapper" key={t.id}>
+                            <img className="sellImg" alt="prodImage" src={t.img} />
                             <div className="sellingInfo">
                             
-                                <div className="prodNameDiv">
+                                <div className="sellNameDiv">
                                     
-                                        <p className="productNameTit">Item</p> 
-                                        <p className="productName">{t.item}</p> 
-                                    
-                                </div>
-                                <div className="prodValDiv">
-                                    
-                                        <p className="productValueTit">Price</p> 
-                                        <p className="productValue">${t.value}</p> 
+                                        <p className="selltNameTit">Item</p> 
+                                        <p className="sellName">{t.item}</p> 
                                     
                                 </div>
-                            
+                                <div className="sellValDiv">
+                                    
+                                        <p className="sellValueTit">Price</p> 
+                                        <p className="sellValue">${t.value}</p> 
+                                    
+                                </div>
+                                <div className="remove">
+                                    <i className="fa fa-remove" style={{fontSize : "48px",color:"red"}}></i>
+                                </div>
                                     
                                 
                                 

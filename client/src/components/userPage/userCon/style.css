@@ -6,6 +6,18 @@
     margin: 0 auto;
     color: white;
 }
+.uploadInputs {
+    font-family: 'Lexend Tera', sans-serif;
+    width: 900px;
+    margin: 0 auto;
+    color: white;
+}
+
+.sellImg {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
 
 .uploadHeader {
     font-family: 'Lexend Tera', sans-serif;
@@ -59,9 +71,166 @@
     margin-left: 60px;
 }
 
+.sellInfoWrapper {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
 .sellingInfo {
     font-family: 'Lexend Tera', sans-serif;
   
     color: white;
 }
 
+.sellNameDiv {
+    float: left;
+    padding: 25px 10vw;
+}
+
+.sellValDiv {
+    float: left;
+    padding: 25px 10vw;
+}
+
+.fa-remove {
+    padding: 28px 5vw;
+}
+
+@media only screen and (max-width: 1300px) {
+    .sellNameDiv {
+        float: left;
+        padding: 25px 8vw;
+    }
+    
+    .sellValDiv {
+        float: left;
+        padding: 25px 8vw;
+    }
+    
+    .fa-remove {
+        padding: 28px 5vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .sellNameDiv {
+        float: left;
+        padding: 25px 6vw;
+    }
+    
+    .sellValDiv {
+        float: left;
+        padding: 25px 6vw;
+    }
+    
+    .fa-remove {
+        padding: 28px 3vw;
+    }
+    .uploadInputs {
+        font-family: 'Lexend Tera', sans-serif;
+        width: 480px;
+        margin: 0 auto;
+        color: white;
+    }
+}
+@media only screen and (max-width: 815px) {
+    .imgLa {
+        position: absolute;
+    }
+    .uploadDiv {
+        font-family: 'Lexend Tera', sans-serif;
+        width: 500px;
+        margin: 0 auto;
+        color: white;
+    }
+    
+}
+
+@media only screen and (max-width: 775px) {
+    .sellInfoWrapper {
+        width: 100vw;
+        
+    }
+    .sellImg {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 685px) {
+    .sellInfoWrapper {
+        width: 100vw;
+ 
+    }
+    
+    .fa-remove {
+        margin-left: 0;
+       
+    }
+    
+    
+}
+
+@media only screen and (max-width: 499px) {
+    .sellInfoWrapper {
+        width: 100vw;
+        margin-left: 0;
+        font-size: .9em;
+    }
+    
+    
+  
+    .uploadDiv {
+        font-family: 'Lexend Tera', sans-serif;
+        width: 300px;
+        margin: 0 auto;
+        color: white;
+        margin-left: 0;
+        font-size: .9em;
+    }
+    
+    .itemVal {
+        margin-right: 30px;
+        padding: 10px 0;
+        margin-bottom: 30px;
+        width: 80px;
+    }
+    .itemIn {
+        margin-right: 0px;
+        padding: 10px 0;
+        margin-bottom: 30px;
+        width: 80px;
+    }
+    .sellNameDiv {
+        padding: 0;
+        margin-left: 15px;
+    }
+    .sellValDiv {
+        padding: 0;
+        margin-left: 15px;
+    }
+    .fa-remove {
+        padding: 0;
+        margin-left: 15px;
+        
+    }
+    .uploadInputs {
+        font-family: 'Lexend Tera', sans-serif;
+        width: 320px;
+        margin: 0 auto;
+        color: white;
+        margin-left: 20px;
+    }
+    .uploadBut {
+        width: 150px;
+        margin: 0 0;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .sellImg {
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+    
+}
