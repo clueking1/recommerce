@@ -1,11 +1,15 @@
 .coWrapper {
     position: fixed;
     bottom: 0;
-    width: 99%;
+    width: 100%;
     text-align: center;
     text-decoration: none;
-    border: 2px solid white;
+    border-top: 2px solid white;
     background-color: rgba(20, 51, 77, 0.514);
+    background-image: url('./assets/gif2.gif');
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 .coWrapper h2 {
