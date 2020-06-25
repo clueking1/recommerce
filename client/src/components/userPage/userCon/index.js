@@ -20,8 +20,8 @@ function UserCon() {
     const [userItems, setUserItems] = useState()
     const [value, setValue] = useState()
     const [dataUri, setDataUri] = useState()
-    const [breakIt, setBreakIt] = useState()
-    const [w, setW] = useState(window.innerWidth)
+    const [confirm, setConfirm] = useState(true)
+  
     useEffect(() => {
         API.getProd()
         .then(res => {
@@ -29,14 +29,6 @@ function UserCon() {
         })
     },[])
 
-    useEffect(() => {
-        console.log(w)
-        if (w <= 1000) {
-            setBreakIt({display:"inline"})
-        } else {
-            setBreakIt({display:"none"})
-        }
-    },[w])
 
     async function loguserout() {
         await API.logout()
@@ -73,6 +65,13 @@ function UserCon() {
           .then(res => {
               console.log(res)
           })
+      }
+      function yesNo(check, id) {
+          if (check === "yes") {
+              setConfirm(!confirm)
+          } else {
+            setConfirm(!confirm)
+          }
       }
       
     return (
@@ -124,7 +123,8 @@ function UserCon() {
                         <div className="sellInfoWrapper" key={t.id}>
                             <img className="sellImg" alt="prodImage" src={t.img} />
                             <div className="sellingInfo">
-                            
+                            {confirm === true ? 
+                                <div>
                                 <div className="sellNameDiv">
                                     
                                         <p className="selltNameTit">Item</p> 
@@ -137,9 +137,29 @@ function UserCon() {
                                         <p className="sellValue">${t.value}</p> 
                                     
                                 </div>
+                                </div> : undefined}
+                                {confirm === true ? 
                                 <div className="remove">
-                                    <i className="fa fa-remove" style={{fontSize : "48px",color:"red"}}></i>
-                                </div>
+                                    <i 
+                                    className="fa fa-remove" 
+                                    style={{fontSize : "48px",color:"red"}}
+                                    onClick={() => setConfirm(!confirm)}
+                                    ></i>
+                                </div> : 
+                                <div className="remove2">
+                                    <p>Remove Item?</p>
+                                    <div className="yesNo">
+                                    <i 
+                                    className="x"
+                                    onClick={() => yesNo("yes")}
+                                    >Yes</i>
+                             
+                                    <i 
+                                    className="x2"
+                                    onClick={() => yesNo("no")}
+                                    >No</i>
+                                    </div>
+                                </div>}
                                     
                                 
                                 

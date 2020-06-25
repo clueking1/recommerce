@@ -74,13 +74,15 @@
 .sellInfoWrapper {
     width: 80vw;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+
 }
 
 .sellingInfo {
     font-family: 'Lexend Tera', sans-serif;
   
     color: white;
+    
 }
 
 .sellNameDiv {
@@ -95,6 +97,37 @@
 
 .fa-remove {
     padding: 28px 5vw;
+}
+
+.remove2 {
+    width: 80vw;
+    margin: 0 auto;
+   
+    border: 1px solid black;
+    height: 149px;
+    background-color: rgba(249, 254, 255, 0.788);
+}
+.remove2 p {
+    color: black;
+    text-align: center;
+}
+.yesNo {
+    width: 0px;
+    margin: 0 auto;
+}
+.x {
+    text-align: center;
+    cursor: pointer;
+    margin-right: 40px;
+ 
+    color: black;
+    
+}
+.x2 {
+    text-align: center;
+    cursor: pointer;
+
+    color: black;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -231,6 +264,14 @@
         width: 100px;
         height: 100px;
         float: left;
+    }
+    .remove2 {
+        width: 80vw;
+        margin: 0 auto;
+       
+        border: 1px solid black;
+        height: 99px;
+        background-color: rgb(249, 254, 255);
     }
     
 }
