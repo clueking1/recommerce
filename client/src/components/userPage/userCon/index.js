@@ -65,6 +65,7 @@ function UserCon() {
           })
           .then(res => {
               console.log(res)
+              setFlip(!flip)
           })
       }
       function yesNo(check, id) {
