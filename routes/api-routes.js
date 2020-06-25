@@ -53,6 +53,12 @@ const { Store } = require('express-session')
             res.json(data)
         })
      })
+     router.put('/deleteProd', (req, res) => {
+        con.query("DELETE FROM photo WHERE photoId = ?",[req.body.id], (err, data) => {
+            if (err) throw err
+            res.json(data)
+        })
+     })
 //   router.post("/check", async (req, res) => {
 //     console.log("Request:", req.body);
     

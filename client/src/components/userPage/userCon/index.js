@@ -21,13 +21,14 @@ function UserCon() {
     const [value, setValue] = useState()
     const [dataUri, setDataUri] = useState()
     const [confirm, setConfirm] = useState(true)
+    const [flip, setFlip] = useState(true)
   
     useEffect(() => {
         API.getProd()
         .then(res => {
             setUserItems(res.data)
         })
-    },[])
+    },[flip])
 
 
     async function loguserout() {
@@ -68,7 +69,14 @@ function UserCon() {
       }
       function yesNo(check, id) {
           if (check === "yes") {
-              setConfirm(!confirm)
+              API.deleteProd({
+                  id : id
+              })
+              .then (res => {
+                setConfirm(!confirm)
+                setFlip(!flip)
+              })
+              
           } else {
             setConfirm(!confirm)
           }
@@ -120,7 +128,7 @@ function UserCon() {
                 <div>
                     {console.log(userItems)}
                     {userItems.map(t => (
-                        <div className="sellInfoWrapper" key={t.id}>
+                        <div className="sellInfoWrapper" key={t.photoId}>
                             <img className="sellImg" alt="prodImage" src={t.img} />
                             <div className="sellingInfo">
                             {confirm === true ? 
@@ -151,7 +159,7 @@ function UserCon() {
                                     <div className="yesNo">
                                     <i 
                                     className="x"
-                                    onClick={() => yesNo("yes")}
+                                    onClick={() => yesNo("yes", t.photoId)}
                                     >Yes</i>
                              
                                     <i 

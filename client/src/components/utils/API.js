@@ -93,4 +93,16 @@ export default {
         
           })
       },
+      deleteProd: function(postdata) {
+        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+        return axios({
+            method: 'put',
+            headers: { 'content-type': 'application/json',
+            "Access-Control-Allow-Origin" : "*"
+        },
+            url: '/deleteProd',
+            credentials : 'same-origin',
+            data: postdata
+          })
+      },
 }
