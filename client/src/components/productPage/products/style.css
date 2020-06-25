@@ -109,3 +109,28 @@
         margin-bottom: 20px;
     }
   }
+
+  @media only screen and (max-width: 500px) {
+    .productsWrapper {
+        height: max-content;
+        width: 300px;
+        margin: 0 auto;              
+        left: 0;
+        right: 0;
+        margin-top: 10px;
+    }
+    .productImg {
+        width: 280px; height: 280px;
+        z-index: 6;
+    }
+    .productOne {
+        width: 280px; 
+    }
+
+    .addToCartBut {
+        width: 280px;
+    }
+    .productTitle {
+        width: 279px;
+    }
+  }
