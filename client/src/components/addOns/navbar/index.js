@@ -17,7 +17,7 @@ function Navbar() {
         })
     }
     return (
-        <nav className="navBar">
+        <nav className="navB">
             <div className="navTitleDiv">
                 <h3 className="navTitle">
                     <a className="navTitleA" href="/">

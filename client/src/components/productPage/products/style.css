@@ -11,6 +11,7 @@
 .productOne {
     font-family: 'Lexend Tera', sans-serif;
     width: 300px; 
+    margin-top: 50px;
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.459);
     height: 422;
@@ -84,7 +85,7 @@
         margin: 0 auto;              
         left: 0;
         right: 0;
-        margin-top: 10px;
+        margin-top: 100px;
     }
     .productOne {
         float: none;
@@ -117,7 +118,7 @@
         margin: 0 auto;              
         left: 0;
         right: 0;
-        margin-top: 10px;
+        margin-top: 100px;
     }
     .productImg {
         width: 280px; height: 280px;

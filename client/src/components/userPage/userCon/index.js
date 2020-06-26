@@ -84,7 +84,7 @@ function UserCon() {
       }
       
     return (
-        <div>
+        <div className="userCon">
             <button onClick={() => loguserout()}>Log Out</button>
             <h2 className="uploadHeader">Resell</h2>
             <div className="uploadDiv">

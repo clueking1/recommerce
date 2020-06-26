@@ -43,6 +43,7 @@ function ViewProducts(props) {
       }
 
     return (
+     
         <div className="productsWrapper">
             {props.items.map(t => (
                  <div className="productOne"  key={t.photoId}>
@@ -66,6 +67,7 @@ function ViewProducts(props) {
             ))}
             
         </div>
+  
     )
 }
 
