@@ -12,7 +12,7 @@ export default {
      })
     },
     createUser: function(postdata) {
-        console.log(postdata)
+  
         return axios({
             method: 'post',
             headers: { 'content-type': 'application/json' },
@@ -22,7 +22,7 @@ export default {
     
       },
       login: function(postdata) {
-          console.log(postdata)
+
         return axios({
             method: 'post',
             headers: { 'content-type': 'application/json',
@@ -46,7 +46,7 @@ export default {
           })
       },
       checklog: function() {
-        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+ 
         return axios({
             method: 'get',
             headers: { 'content-type': 'application/json',
@@ -58,7 +58,7 @@ export default {
           })
       },
       upload: function(postdata) {
-        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+
         return axios({
             method: 'post',
             headers: { 'content-type': 'application/json',
@@ -70,7 +70,7 @@ export default {
           })
       },
       getImages: function() {
-        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+
         return axios({
             method: 'get',
             headers: { 'content-type': 'application/json',
@@ -82,7 +82,7 @@ export default {
           })
       },
       getProd: function() {
-        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+
         return axios({
             method: 'get',
             headers: { 'content-type': 'application/json',
@@ -94,7 +94,7 @@ export default {
           })
       },
       deleteProd: function(postdata) {
-        //return axios.get("http://localhost:7001/checklog", { credentials : 'same-origin' });
+
         return axios({
             method: 'put',
             headers: { 'content-type': 'application/json',

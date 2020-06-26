@@ -21,7 +21,7 @@ function ViewProducts(props) {
         
 
        function stateLen(it) {
-           console.log('awwww')
+       
             if (state.length === 0) {
                 dispatch({type: "add", value: it.value, item: it.item, src: it.src, id: it.id })
                 setFlip(!flip)
@@ -31,7 +31,7 @@ function ViewProducts(props) {
         }
         
       function plusAdd(it) {
-        console.log('awwww4')
+  
         let index = state.map(e =>  e.id).indexOf(it.id)
         
         if (index !== -1) {
