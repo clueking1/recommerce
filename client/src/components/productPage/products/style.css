@@ -7,6 +7,7 @@
     left: 0;
     right: 0;
     margin-top: 100px;
+    margin-bottom: 150px;
 }
 .productOne {
     font-family: 'Lexend Tera', sans-serif;
@@ -21,34 +22,7 @@
     margin-right: 20px;
     background-image: url("./assets/gif2.gif");
 }
- 
-.productTwo {
-    font-family: 'Lexend Tera', sans-serif;
-    width: 300px; 
-   
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.459);
-    height: 422;
-    box-shadow: 10px 10px 20px 2px #88888877;
-    float: left;
-    margin-right: 20px;
-    
-    background-image: url("./assets/gif2.gif");
-}
 
-
-.productThree {
-    font-family: 'Lexend Tera', sans-serif;
-    width: 300px; 
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.459);
-    height: 422;
-    box-shadow: 10px 10px 20px 2px #88888877;
-    float: left;
-    
-    z-index: 6;
-    background-image: url("./assets/gif2.gif");
-}
 
 .productImg {
     width: 302px; height: 300px;
@@ -86,6 +60,7 @@
         left: 0;
         right: 0;
         margin-top: 100px;
+        margin-bottom: 150px;
     }
     .productOne {
         float: none;
@@ -95,21 +70,7 @@
         right: 0;
         margin-bottom: 20px;
     }
-    .productTwo {
-        float: none;
-        margin: 0 auto;              
-        left: 0;
-        right: 0;
-        margin-bottom: 20px;
-    }
-    .productThree {
-        float: none;
-        margin: 0 auto;              
-        left: 0;
-        right: 0;
-        margin-bottom: 20px;
-    }
-  }
+}
 
   @media only screen and (max-width: 500px) {
     .productsWrapper {
@@ -119,6 +80,7 @@
         left: 0;
         right: 0;
         margin-top: 100px;
+        margin-bottom: 150px;
     }
     .productImg {
         width: 280px; height: 280px;
