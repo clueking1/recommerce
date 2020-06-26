@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useUserContext } from '../../utils/userStore'
+import Compressor from 'compressorjs';
 import API from '../../utils/API'
 import './style.css'
 
@@ -49,23 +50,36 @@ function UserCon() {
           setDataUri('');
           return;
         }
+        new Compressor(file, {
+            quality: .4,
+            maxHeight: 350,
+            maxwidth: 350,
+            success(result) {
+                fileToDataUri(result)
+                .then(dataUri => {
+                  setDataUri(dataUri)
+              })
+            },
+            error(err) {
+              console.log(err.message);
+            },
+          });
+        
     
-        fileToDataUri(file)
-          .then(dataUri => {
-            setDataUri(dataUri)
-            
-        })
+        // fileToDataUri(file)
+        //   .then(dataUri => {
+        //     setDataUri(dataUri)
+        // })
           
       }
       async function uploadItem() {
-        await API.upload({
+          await API.upload({
               item: item,
               value: value,
               img: dataUri
           })
           .then(res => {
-              console.log(res)
-              setFlip(!flip)
+             setFlip(!flip)
           })
       }
       function yesNo(check, id) {

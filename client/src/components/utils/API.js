@@ -3,11 +3,10 @@ import axios from "axios";
 export default {
     // Gets all posts
     stripe: function(postData) {
-
     return axios({
         method: 'post',
         headers: { 'content-type': 'application/json' },
-        url: '/check',
+        url: 'http://localhost:7001/check',
         data: postData
      })
     },
@@ -16,13 +15,13 @@ export default {
         return axios({
             method: 'post',
             headers: { 'content-type': 'application/json' },
-            url: '/user',
+            url: 'http://localhost:7001/user',
             data: postdata
           })
     
       },
       login: function(postdata) {
-
+       
         return axios({
             method: 'post',
             headers: { 'content-type': 'application/json',
@@ -46,7 +45,7 @@ export default {
           })
       },
       checklog: function() {
- 
+       
         return axios({
             method: 'get',
             headers: { 'content-type': 'application/json',
@@ -58,7 +57,6 @@ export default {
           })
       },
       upload: function(postdata) {
-
         return axios({
             method: 'post',
             headers: { 'content-type': 'application/json',
@@ -70,7 +68,6 @@ export default {
           })
       },
       getImages: function() {
-
         return axios({
             method: 'get',
             headers: { 'content-type': 'application/json',
@@ -82,7 +79,6 @@ export default {
           })
       },
       getProd: function() {
-
         return axios({
             method: 'get',
             headers: { 'content-type': 'application/json',
@@ -94,7 +90,6 @@ export default {
           })
       },
       deleteProd: function(postdata) {
-
         return axios({
             method: 'put',
             headers: { 'content-type': 'application/json',
