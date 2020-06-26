@@ -29,7 +29,7 @@ function Home() {
         <div className="homeWrapper">
             <Navbar />
             <HomePage />
-            <HomePageCon />
+           
            {state.length >= 1 ? <Checkout /> : undefined} 
         </div>
     )

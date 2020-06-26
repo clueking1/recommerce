@@ -2,12 +2,13 @@
     height: 100%;
     width: 100%;
     background-image: url("./assets/embossed-diamond.png");
+    overflow: auto;
 }
 
 .homePageColor {
     height: 100%;
     width: 100%;
-
+    overflow: auto;
     opacity: .9;
 }
 

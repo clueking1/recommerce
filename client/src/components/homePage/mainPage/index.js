@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
+import HomePageCon from '../mainCon'
 
 function HomePage() {
 
@@ -28,7 +29,7 @@ function HomePage() {
     return (
         <div className="homePageWrapper">
             <div className="homePageColor" style={backColor}>
-                
+                <HomePageCon />
             </div>
         </div>
     )
