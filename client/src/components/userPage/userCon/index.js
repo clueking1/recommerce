@@ -64,13 +64,7 @@ function UserCon() {
               console.log(err.message);
             },
           });
-        
-    
-        // fileToDataUri(file)
-        //   .then(dataUri => {
-        //     setDataUri(dataUri)
-        // })
-          
+
       }
       async function uploadItem() {
           await API.upload({
@@ -79,6 +73,10 @@ function UserCon() {
               img: dataUri
           })
           .then(res => {
+             document.querySelector('.itemIn').value = ""
+             document.querySelector('.itemVal').value = ""
+             console.log(document.querySelector('.imgIn'))
+             
              setFlip(!flip)
           })
       }

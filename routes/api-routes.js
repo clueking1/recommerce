@@ -48,7 +48,7 @@ const { Store } = require('express-session')
        })
     })
     router.get('/userProd', (req, res) => {
-        con.query("SELECT * FROM photo WHERE userId = ?",[req.user[0].userId], (err, data) => {
+        con.query("SELECT * FROM photo WHERE userId = ? ORDER BY photoId DESC",[req.user[0].userId], (err, data) => {
             if (err) throw err
             res.json(data)
         })
