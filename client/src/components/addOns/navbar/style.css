@@ -40,6 +40,7 @@
 
 }
 
+
 .navTitleCom {
     color: white;
 }
@@ -51,14 +52,26 @@
 .navProductsA {
     text-decoration: none;
     color: white;
-    
+    transition: .5s ease-in-out;
+}
+
+.navProductsA:hover {
+    color: grey;
+    font-size: .98em;
 }
 
 .fa-user {
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
+    transition: .5s ease-in-out;
 }
+.fa-user:hover {
+    font-size: 39px;
+    color: rgb(189, 178, 178);
+    
+}
+
 
 @media only screen and (max-width: 500px) {
     .navTitleRe {
@@ -72,12 +85,18 @@
     
     }
     .navCart {
-        width: 30px;
+        width: 35px;
         margin-top: 8px;
     }
     .navProductsDiv {
         margin-top: 8px;
+    }
+    .navProductsA {
         font-size: .9em;
+    }
+    .navProductsA:hover {
+        color: grey;
+        font-size: .88em;
     }
 }
 
