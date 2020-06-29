@@ -1,117 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
 
 .navB {
+    box-sizing: border-box;
     background-color: rgb(20, 51, 77);
     width: 100%;
-    height: 60px;
+    height: 70px;
     position: fixed;
     font-family: 'Lexend Tera', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
     z-index: 10;
 }
 
 .navTitleDiv {
-    width: 60%;
-    float: left;
-}
+    flex: 6 2 200px;
 
-.navAboutDiv {
-    width: 15%;
-    float: left;
-    padding-top: 20px; 
 }
 
 .navProductsDiv {
-    width: 15%;
-    float: left;
-    padding-top: 20px; 
-}
-
-.navTitleDiv h3 {
-    margin:0px;
-    padding: 10px;
-    width: 30%;
+    flex: 4 0 100px;
+    margin-top: 12px;
 }
 
 .navCart {
-    float: left;
-    width: 8%;
-    height: 50px;
-    margin-top: 5px;
-}
-
-.fa {
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-left: 80px;
-    cursor: pointer;
-    font-size: 30px;
-    color: white;
-}
-
-.fa-user {
-    width: 30px;
-    height: 30px;
-}
-
-.navCart h3 {
-    margin:0px;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.navTitleA {
-    text-decoration: none;
-    width: 200px;
-}
-
-.navAboutA {
-    text-decoration: none;
-    color: white;
-}
-
-.navProductsA {
-    text-decoration: none;
-    color: white;
+    width: 50px;
+    margin-top: 12px;
 }
 
 .navTitleRe {
     color: rgb(20, 51, 77);
     text-align: center;
-    padding: 5px;
+    padding: 3px;
     border: 1px white solid;
     background-color: white;
     border-radius: 50%;
     font-size: 1.7em;
+
 }
 
 .navTitleCom {
-    color: rgb(255, 255, 255);
-    margin-left: 8px;
+    color: white;
 }
 
-@media only screen and (max-width: 499px) {
-    .navTitleRe {
-        
-        font-size: .9em;
-    }
-    
-    .navTitleCom {
-        color: rgb(255, 255, 255);
-        margin-left: 8px;
-        font-size: .5em;
-    }
-    .navTitleDiv {
-        width: 50%;
-        margin-top: 5px;
+.navTitleA {
+    text-decoration: none;
+}
 
+.navProductsA {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.fa-user {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .navTitleRe {
+        color: rgb(20, 51, 77);
+        text-align: center;
+        padding: 3px;
+        border: 1px white solid;
+        background-color: white;
+        border-radius: 50%;
+        font-size: 1.3em;
+    
     }
-    .navProductsA {
-        text-decoration: none;
-        color: white;
-        font-size: .7em;
+    .navCart {
+        width: 30px;
+        margin-top: 8px;
     }
-    .fa-user {
-        margin-left: 60px;
+    .navProductsDiv {
+        margin-top: 8px;
+        font-size: .9em;
     }
 }
 
