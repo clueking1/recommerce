@@ -22,7 +22,9 @@
     "react-scripts": "3.4.1",
     "react-stripe-checkout": "^2.6.3",
     "reactstrap": "^8.4.1",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "autoprefixer": "^9.8.4",
+    "cross-env": "^7.0.2"
   },
   "scripts": {
     "start": "cross-env AUTOPREFIXER_GRID=autoplace react-scripts start",
