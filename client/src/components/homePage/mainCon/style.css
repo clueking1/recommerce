@@ -89,6 +89,8 @@
     margin-left: 200px;
     font-family: 'Lexend Tera', sans-serif;
     cursor: pointer;
+    background-color: white;
+    color: rgb(20, 51, 77);
 }
 
 .seller {
@@ -98,6 +100,8 @@
     margin-left: 10px;
     font-family: 'Lexend Tera', sans-serif;
     cursor: pointer;
+    background-color: white;
+    color: rgb(20, 51, 77);
 }
 
 @media only screen and (max-width: 750px) {
