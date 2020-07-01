@@ -16,7 +16,7 @@ function HomePageCon() {
             if (color !== 0) {
      
                 color++
-                start += color / 181
+                start += color / 90
             //setOp({opacity : `${start / 181}`, transform: `scale(${start / 181})`, webkitTransform:  `scale(${start / 181})`})
             setOp({opacity : `${start / 181}`})
             } 
@@ -27,7 +27,7 @@ function HomePageCon() {
        
         setInterval(function (){ 
             clearInterval(int)
-        }, 1800)
+        }, 2000)
        
          
     }, [])

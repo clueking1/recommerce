@@ -6,6 +6,7 @@
     position: relative;          /* to props top/bottom take effect */
     margin: 0 auto;  /* This is how you center a block verticaly */
     margin-top: 200px;
+    
 }
 
 .homeTitle {

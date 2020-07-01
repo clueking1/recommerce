@@ -16,7 +16,7 @@ const { Store } = require('express-session')
             req.body.password,
          )
          .then(result => {
-           res.json(result)
+           res.json("success")
          })
     })
     router.post('/api/login', passport.authenticate('local'), (req, res) => {
